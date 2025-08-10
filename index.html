@@ -22,9 +22,10 @@
                               req_pushed.add(TableObject.need);
                               array.push({lore: TableObject.need});
                           }
+                          time_total += !TableObject.time ? 0 : TableObject.time;
                       }
                       el("root").innerHTML += string + "</span></div><br>";
-                      time_total += !TableObject.time ? 0 : TableObject.time;
+                      
                       array.shift();
                   }
                   el("C").textContent = time_total;
