@@ -1,0 +1,20 @@
+<!doctypehtml>
+<html lang=en>
+  <head>
+    <script defer>
+      const el = e => document.getElementById(e);
+      el("B").addEventListener("click", async function () {
+        var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
+        var object = await stream.json();
+        el("A").textContent = JSON.stringify(object);
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Bingo Card Difficulty Viewer</h2>
+    <p id="A">API Data: </p>
+    <button id="B">Click to load current Hypixel API data</button>
+    <p id="C">WIP</p>
+    <div id="root">WIP</div>
+  </body>
+</html>
