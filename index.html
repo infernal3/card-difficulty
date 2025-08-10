@@ -12,7 +12,7 @@
                   for(var goal of object.goals){
                       var filteredLore = goal.lore.replaceAll(/\xA7./g, "");
                       var TableObject = TABLE[filteredLore];
-                      var string = `<div><span>${filteredLore}</span><br><span>Data Time Estimate: `;
+                      var string = `<div>${!!goal.tiers ? "[COMMUNITY]" : ""}<span>${filteredLore}</span><br><span>Data Time Estimate: `;
                       if(TableObject) {
                           string += `${TableObject.time}`;
                           requirements.add(TableObject.need);
