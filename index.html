@@ -22,7 +22,7 @@
                               req_pushed.add(TableObject.need);
                               array.push({lore: TableObject.need});
                           }
-                          time_total += !TableObject.time ? 0 : TableObject.time;
+                          time_total += isNaN(parseInt(TableObject.time)) ? 0 : parseInt(TableObject.time); 
                       }
                       el("root").innerHTML += string + "</span></div><br>";
                       
