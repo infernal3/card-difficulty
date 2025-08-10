@@ -16,7 +16,7 @@
                       var string = `<div>${!!goal.tiers ? "[COMMUNITY] " : ""}<span>${filteredLore}</span><br><span>Data Time Estimate: `;
                       if(TableObject) {
                           string += `${TableObject.time}`;
-                          if(!array.includes(TABLE[TableObject.need])) array.push(TABLE[TableObject.need]);
+                          if(!array.includes({lore: TableObject.need})) array.push({lore: TableObject.need});
                       }
                       el("root").innerHTML += string + "</span></div><br>";
                       array.shift();
