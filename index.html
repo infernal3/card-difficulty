@@ -4,6 +4,7 @@
     <script defer src="./bingogoals.js"></script>
     <script defer>
         const el = e => document.getElementById(e);
+        var req_pushed = new Set();
         window.addEventListener("load", () => {
              el("B").addEventListener("click", async function () {
                   var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
@@ -16,12 +17,14 @@
                       var string = `<div>${!!goal.tiers ? "[COMMUNITY] " : ""}<span>${filteredLore}</span><br><span>Data Time Estimate: `;
                       if(TableObject) {
                           string += `${TableObject.time}`;
-                          if(!array.includes({lore: TableObject.need})) array.push({lore: TableObject.need});
+                          if(!req_pushed.has(TableObject.need)) {
+                              req_pushed.add(TableObject.need);
+                              array.push({lore: TableObject.need});
+                          }
                       }
                       el("root").innerHTML += string + "</span></div><br>";
                       array.shift();
                   }
-                  for(var req of requirements) el("C").innerHTML += req + ", ";
                   el("B").style = "display: none;";
              });
         });
