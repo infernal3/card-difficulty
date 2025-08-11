@@ -19,11 +19,23 @@
                               break;
                           case 1:
                               var collection = goal.name.substring(0, goal.name.length - 10);
-                              console.log('"'+collection+'"');
-                              string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`;
+                              var CollectionsObject = COLLECTION_GOALS[collection];
+                              if(!CollectionsObject){
+                                  string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`;
+                              } else if (CollectionsObject == "Minion"){
+                                  string = `${filteredLore}<br>No data found for Collection Goal.`;
+                              } else {
+                                  var TimeEst = CollectioneObject.formula(goal.requiredAmount);
+                                  time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
+                                  if(!req_pushed.has(CollectionsObject.requirement)) {
+                                      req_pushed.add(CollectionsObject.requirement);
+                                      array.push({lore: CollectionsObject.requirement});
+                                  }
+                                  string = `${filteredLore}<br>Calculated Time Estimate: ${TimeEst.toFixed(2)} min<br>Requirements (if any): ${CollectionsObject.requirement}`;
+                              }
                               break;
                           case 2:
-                              string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}`;
+                              string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time} min<br>Requirements (if any): ${TableObject.need}`;
                               var TimeEst = parseInt(TableObject.time);
                               time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
                               if(!req_pushed.has(TableObject.need)) {
