@@ -23,7 +23,9 @@
                               string = `[COMMUNITY] ${filteredLore}`;
                               break;
                           case 1:
-                              string = `${filteredLore}<br>Collection goals are WIP`;
+                              var collection = goal.name.substring(0, goal.name.length - 10);
+                              console.log(collection);
+                              string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`;
                               break;
                           case 2:
                               string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}`;
