@@ -28,7 +28,7 @@
                       
                       array.shift();
                   }
-                  el("C").textContent = time_total;
+                  el("C").textContent = (time_total/60).toFixed(2);
                   el("B").style = "display: none;";
              });
         });
@@ -38,7 +38,7 @@
     <h2>Bingo Card Difficulty Viewer</h2>
     <p id="A"></p>
     <button id="B">Click to load current Hypixel API data</button>
-    <p>Total Time Estimate (WIP): <span id="C"></span></p>
+    <p>Total Time Estimate (WIP): <span id="C"></span> hours</p>
     <h2>All Goals And Requirements</h2>
     <div id="root"></div>
   </body>
