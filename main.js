@@ -23,9 +23,9 @@
                               if(!CollectionsObject){
                                   string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`;
                               } else if (CollectionsObject == "Minion"){
-                                  string = `${filteredLore}<br>No data found for Collection Goal.`;
+                                  string = `${filteredLore}<br>Data found for this collection goal marks it for Minions.`;
                               } else {
-                                  var TimeEst = CollectioneObject.formula(goal.requiredAmount);
+                                  var TimeEst = CollectionsObject.formula(goal.requiredAmount);
                                   time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
                                   if(!req_pushed.has(CollectionsObject.requirement)) {
                                       req_pushed.add(CollectionsObject.requirement);
