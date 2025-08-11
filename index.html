@@ -28,7 +28,7 @@
                           case 2:
                               string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}`;
                               var TimeEst = parseInt(TableObject.time);
-                              time_total += TimeEst == 2147483647 ? 0 : TimeEst;
+                              time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
                               if(!req_pushed.has(TableObject.need)) {
                                   req_pushed.add(TableObject.need);
                                   array.push({lore: TableObject.need});
