@@ -27,6 +27,12 @@
                               break;
                           case 2:
                               string = `<div>${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}<br></div>`;
+                              var TimeEst = parseInt(TableObject.time);
+                              time_total += TimeEst == 2147483647 ? 0 : TimeEst;
+                              if(!req_pushed.has(TableObject.need)) {
+                                  req_pushed.add(TableObject.need);
+                                  array.push({lore: TableObject.need});
+                              }
                               break;
                           default:
                               string = `<div>${filteredLore}<br><span style="color: #f00">No data found for this goal.</span><br></div>`;
