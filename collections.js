@@ -27,7 +27,7 @@ const COLLECTION_GOALS = {
     Sand: {formula: E => E / 4500, requirement: "hotm3"},
     "End Stone": {formula: E => E / 4050, requirement: "combat15"},
     Mithril: null,
-    "Hard Stone": null,
+    "Hard Stone": {formula: E => E / 7000, requirement: "hotm4"},
     Gemstone: {formula: E => E / 500, requirement: "hotm4"},
     "Rotten Flesh": "Minion",
     Bone: "Minion",
