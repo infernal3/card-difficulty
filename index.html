@@ -20,13 +20,13 @@
                       var string;
                       switch(goalType){
                           case 0:
-                              string = `<div>[COMMUNITY] ${filteredLore}<br></div>`;
+                              string = `[COMMUNITY] ${filteredLore}`;
                               break;
                           case 1:
-                              string = `<div>${filteredLore}<br>Collection goals are WIP<br></div>`;
+                              string = `${filteredLore}<br>Collection goals are WIP`;
                               break;
                           case 2:
-                              string = `<div>${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}<br></div>`;
+                              string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}`;
                               var TimeEst = parseInt(TableObject.time);
                               time_total += TimeEst == 2147483647 ? 0 : TimeEst;
                               if(!req_pushed.has(TableObject.need)) {
@@ -35,10 +35,10 @@
                               }
                               break;
                           default:
-                              string = `<div>${filteredLore}<br><span style="color: #f00">No data found for this goal.</span><br></div>`;
+                              string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
                               break;
                       }
-                      el("root").innerHTML += string;
+                      el("root").innerHTML += "<div>" + string + "<br></div><br>";
                       
                       array.shift();
                   } // Post-generation
