@@ -12,22 +12,30 @@
                   var object = await stream.json();
                   var array = object.goals;
                   while(array.length > 0){
+                      // Dynamic HTML creation
                       var goal = array[0];
                       var filteredLore = goal.lore.replaceAll(/\xA7./g, "");
                       var TableObject = TABLE[filteredLore];
-                      var string = `<div>${!!goal.tiers ? "[COMMUNITY] " : ""}<span>${filteredLore}</span><br><span>Data Time Estimate: `;
-                      if(TableObject) {
-                          string += `${TableObject.time}`;
-                          if(!req_pushed.has(TableObject.need)) {
-                              req_pushed.add(TableObject.need);
-                              array.push({lore: TableObject.need});
-                          }
-                          time_total += isNaN(parseInt(TableObject.time)) ? 0 : parseInt(TableObject.time) ==2147483647 ? 60 : parseInt(TableObject.time); 
+                      var goalType = !!goal.tiers ? 0 : (filteredLore.startsWith("Reach ") && filteredLore.endsWith(" Collection.")) ? 1 : !TableObject ? 3 : 2;
+                      var string;
+                      switch(goalType){
+                          case 0:
+                              string = `<div>[COMMUNITY] ${filteredLore}<br></div>`;
+                              break;
+                          case 1:
+                              string = `<div>${filteredLore}<br>Collection goals are WIP<br></div>`;
+                              break;
+                          case 2:
+                              string = `<div>${filteredLore}<br>Base Time Estimate: ${TableObject.time}<br>Requirements (if any): ${TableObject.need}<br></div>`;
+                              break;
+                          default:
+                              string = `<div>${filteredLore}<br><span style="color: #f00">No data found for this goal.</span><br></div>`;
+                              break;
                       }
-                      el("root").innerHTML += string + "</span></div><br>";
+                      el("root").innerHTML += string;
                       
                       array.shift();
-                  }
+                  } // Post-generation
                   el("C").textContent = (time_total/60).toFixed(2);
                   el("B").style = "display: none;";
              });
