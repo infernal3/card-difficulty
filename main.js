@@ -7,6 +7,7 @@
                   var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
                   var object = await stream.json();
                   var array = object.goals;
+                  el("AA").innerHTML = `Bingo #${object.id} (${object.name})<br>This bingo's modifier is ${object.modifier}.`
                   while(array.length > 0){
                       // Dynamic HTML creation
                       var goal = array[0];
