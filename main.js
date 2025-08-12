@@ -12,7 +12,7 @@
                       var goal = array[0];
                       var filteredLore = goal.lore.replaceAll(/\xA7./g, "");
                       var TableObject = TABLE[filteredLore];
-                      var goalType = !!goal.tiers ? 0 : (filteredLore.startsWith("Reach ") && filteredLore.endsWith(" Collection.")) ? 1 : !TableObject ? 3 : 2;
+                      var goalType = !!goal.tiers ? 0 : (filteredLore.startsWith("Reach ") && filteredLore.endsWith(" Collection.")) ? 1 : (!TableObject || TableObject.time == "2147483647") ? 3 : 2;
                       var string;
                       switch(goalType){
                           case 0:
