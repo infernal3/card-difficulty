@@ -1,6 +1,7 @@
         const el = e => document.getElementById(e);
         var req_pushed = new Set();
         var time_total = 0;
+        var warn_flag = 0;
         window.addEventListener("load", () => {
              el("B").addEventListener("click", async function () {
                   var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
@@ -44,6 +45,7 @@
                               }
                               break;
                           default:
+                              if(filteredLore != "") warn_flag++;
                               string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
                               break;
                       }
@@ -53,5 +55,6 @@
                   } // Post-generation
                   el("C").textContent = (time_total/60).toFixed(2);
                   el("B").style = "display: none;";
+                  if(!!warn_flag) el("A").textContent = `WARNING: Could not find data for ${warn_flag} goal${warn_flag == 1 ? "" : "s"}.`;
              });
         });
