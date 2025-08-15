@@ -3,7 +3,7 @@ const COLLECTION_GOALS = {
     Carrot: {formula: E => E / 13371, requirement: "garden1"}, 
     Potato: {formula: E => E / 13371, requirement: "garden5"},
     Pumpkin: {formula: E => E / 3600, requirement: "garden5"},
-    Melon: {formula: E => E / 18000, requirement: "garden5"},
+    Melon: {formula: E => E / 17999, requirement: "garden5"},
     Mushroom: null,
     Cactus: null,
     "Sugar Cane": {formula: E => E / 7200, requirement: "garden5"},
