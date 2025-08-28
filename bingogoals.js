@@ -471,23 +471,23 @@ var TABLE = {
 		time: "2147483647",
 		need: ""
 	},
-	"Reach a non-cosmetic Skill average of 8.": {
+	"Reach a non-cosmetic Skill Average of 8.": {
 		time: "0",
 		need: "combat15"
 	},
-	"Reach a non-cosmetic Skill average of 10.": {
+	"Reach a non-cosmetic Skill Average of 10.": {
 		time: "2147483647",
 		need: ""
 	},
-	"Reach a non-cosmetic Skill average of 12.": {
+	"Reach a non-cosmetic Skill Average of 12.": {
 		time: "2147483647",
 		need: ""
 	},
-	"Reach a non-cosmetic Skill average of 14.": {
+	"Reach a non-cosmetic Skill Average of 14.": {
 		time: "2147483647",
 		need: ""
 	},
-	"Reach a non-cosmetic Skill average of 17.": {
+	"Reach a non-cosmetic Skill Average of 17.": {
 		time: "2147483647",
 		need: ""
 	},
