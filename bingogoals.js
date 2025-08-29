@@ -647,7 +647,7 @@ var TABLE = {
 		time: "2147483647",
 		need: ""
 	},
-	"Apply 5 stars to a dungeon item.": {
+	"Apply 5 Stars to a dungeon item": {
 		time: "0",
 		need: "cata3"
 	},
