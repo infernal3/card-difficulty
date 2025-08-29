@@ -311,7 +311,7 @@ var TABLE = {
 		time: "0",
 		need: "combat15"
 	},
-	"Obtain a Mediocre Ring Of Love.": {
+	"Obtain a Mediocre Ring of Love.": {
 		time: "5",
 		need: "hotf1"
 	},
