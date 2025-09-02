@@ -11,7 +11,7 @@ const COLLECTION_GOALS = {
     "Raw Chicken": "Minion",
     Leather: "Minion",
     "Raw Porkchop": "Minion",
-    Mutton: "Minion",
+    "Raw Mutton": "Minion",
     "Raw Rabbit": "Minion",
     "Lapis Lazuli": {formula: E => E / 2740.5, requirement: "hotm3"},
     Cobblestone: {formula: E => E / 4500, requirement: "hotm3"},
@@ -49,7 +49,7 @@ const COLLECTION_GOALS = {
     "Prismarine Shard": "Minion",
     "Prismarine Crystals": "Minion",
     Sponge: "Minion",
-    Clay: "Minion",
+    "Clay Ball": "Minion",
     "Lily Pad": null,
     "Ink Sac": null
 }
