@@ -616,8 +616,8 @@ var TABLE = {
 		need: "combat22"
 	},
 	"Spawn a Golden Goblin.": {
-		time: "2147483647",
-		need: ""
+		time: "0",
+		need: "hotm3"
 	},
 	"Spawn a Golden Goblin from a Goblin Egg.": {
 		time: "2147483647",
@@ -656,8 +656,8 @@ var TABLE = {
 		need: ""
 	},
 	"Obtain a Titanic Experience Bottle.": {
-		time: "2147483647",
-		need: ""
+		time: "15",
+		need: "combat15"
 	},
 	"Fish up a Carrot King.": {
 		time: "15",
@@ -708,8 +708,8 @@ var TABLE = {
 		need: "hotm4"
 	},
 	"Collect 25,000 ᠅ Mithril Powder.": {
-		time: "2147483647",
-		need: ""
+		time: "0",
+		need: "hotm4"
 	},
 	"Collect 50,000 ᠅ Mithril Powder.": {
 		time: "2147483647",
