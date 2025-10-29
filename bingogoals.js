@@ -163,6 +163,10 @@ var TABLE = {
 		time: "0",
 		need: "combat15"
 	},
+	"Reach 30% α Sea Creature Chance.": {
+		time: "1",
+		need: ""
+	}
 	"Apply the Titanic reforge to an item.": {
 		time: "0",
 		need: "combat15"
@@ -794,5 +798,9 @@ var TABLE = {
 	"fishing15": {
 		time: "105",
 		need: "combat15"
+	},
+    "Wear 4 pieces of Equipment.": {
+		time: "1",
+		need: ""
 	}
 }
