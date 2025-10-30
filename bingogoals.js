@@ -166,7 +166,7 @@ var TABLE = {
 	"Reach 30% α Sea Creature Chance.": {
 		time: "1",
 		need: ""
-	}
+	},
 	"Apply the Titanic reforge to an item.": {
 		time: "0",
 		need: "combat15"
