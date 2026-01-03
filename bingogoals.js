@@ -101,55 +101,68 @@ var TABLE = {
 	},
 	"Reach 1,250 ❤ Health.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a set of Growth 5 Ender Armor and equip it while in the End."]
 	},
 	"Reach 1,000 ❤ Health.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a set of Growth 5 Ender Armor and equip it while in the End."]
 	},
 	"Reach 750 ❤ Health.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a set of Growth 5 Ender Armor and equip it while in the End."]
 	},
 	"Reach 500 ❤ Health.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a set of Ender Armor and equip it while in the End."]
 	},
 	"Reach 250 ❤ Health.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a set of Ender Armor and equip it while in the End."]
 	},
 	"Reach 200 ❁ Strength.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 180 ❁ Strength.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 160 ❁ Strength.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 140 ❁ Strength.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 120 ❁ Strength.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 200 ✦ Speed.": {
 		time: "0",
-		need: ""
+		need: "",
+		obtain: ["Receive potions from Alixer or a bingo splash.", "Obtain a Rogue Sword and use its ability."]
 	},
 	"Reach 250 ✦ Speed.": {
 		time: "0",
-		need: ""
+		need: "",
+		obtain: ["Receive potions from Alixer or a bingo splash.", "Obtain a Rogue Sword and use the ability."]
 	},
 	"Reach 3 ⫽ Ferocity.": {
 		time: "1",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Have another player use an Alert Flare or SOS Flare near you.", "Purchase a Dirt Bottle from the Smithmonger and use it at a Reforge Anvil to reforge a sword, then hold it."]
 	},
 	"Reach 100 ☠ Crit Damage.": {
 		time: "0",
@@ -165,35 +178,43 @@ var TABLE = {
 	},
 	"Reach 30% α Sea Creature Chance.": {
 		time: "1",
-		need: ""
+		need: "",
+		obtain: ["Equip a set of Angler Armor, including the equipment. Then enchant a fishing rod with Angler 5 and hold it."]
 	},
 	"Apply the Titanic reforge to an item.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Reforge pieces of armor at the Blacksmith."]
 	},
 	"Apply the Reinforced reforge to an item.": {
 		time: "5",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Mine diamonds in the Deep Caverns to obtain a Rare Diamond. Then use it at a Reforge Anvil to reforge a piece of armor."]
 	},
 	"Apply the Dirty reforge to an item.": {
 		time: "1",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Purchase a Dirt Bottle from the Smithmonger and use it at a Reforge Anvil to reforge a sword."]
 	},
 	"Apply the Hyper Reforge to any Armor Piece.": {
 		time: "15",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Mine end nodes in the End to obtain an End Stone Geode. Then use it at a Reforge Anvil to reforge a piece of armor."]
 	},
 	"Obtain 10 Fairy Souls.": {
 		time: "4",
-		need: ""
+		need: "",
+		obtain: ['The locations of Fairy Souls can be found on the <a href="https://wiki.hypixel.net/Fairy_Souls#Hub_">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Obtain 25 Fairy Souls.": {
 		time: "10",
-		need: ""
+		need: "",
+		obtain: ['The locations of Fairy Souls can be found on the <a href="https://wiki.hypixel.net/Fairy_Souls#Hub_">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Obtain 50 Fairy Souls.": {
 		time: "20",
-		need: ""
+		need: "",
+		obtain: ['The locations of Fairy Souls can be found on the <a href="https://wiki.hypixel.net/Fairy_Souls#Hub_">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Complete Puzzler's quest.": {
 		time: "0",
