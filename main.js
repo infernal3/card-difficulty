@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
 				string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
 				break
 			}
-			el("root").innerHTML += "<div>" + string + "<br></div><br>";
+			el("root").innerHTML += '<div class="bingo-goal">' + string + "<br></div><br>";
 			array.shift()
 		} // Post-generation
 		el("C").textContent = (time_total / 60).toFixed(2);
