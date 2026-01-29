@@ -44,7 +44,7 @@ const COLLECTION_GOALS = {
     "Jungle Log": {formula: E => E / 4180, requirement: "hotf1"},
     "Raw Cod": "Minion",
     "Raw Salmon": "Minion",
-    Clownfish: "Minion",
+    "Tropical Fish": "Minion",
     Pufferfish: "Minion",
     "Prismarine Shard": "Minion",
     "Prismarine Crystals": "Minion",
