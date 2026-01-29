@@ -40,6 +40,13 @@ window.addEventListener("load", () => {
 				break;
 			case 2:
 				string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time} min<br>Requirements (if any): ${TableObject.need}`;
+				if (TableObject.obtain) {
+					var string1 = "<br><div><div>Method(s) for obtaining this goal:</div><ul>";
+					for (const arg of TableObject.obtain) {
+						string1 += `<li>${arg}</li>`;
+					}
+					string += string1 + "</ul></div>";
+				}
 				var TimeEst = parseInt(TableObject.time);
 				time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
 				if (!req_pushed.has(TableObject.need)) {
