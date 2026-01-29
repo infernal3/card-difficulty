@@ -164,11 +164,11 @@ var TABLE = {
 		need: "hotm3",
 		obtain: ["Have another player use an Alert Flare or SOS Flare near you.", "Purchase a Dirt Bottle from the Smithmonger and use it at a Reforge Anvil to reforge a sword, then hold it."]
 	},
-	"Reach 100 ☠ Crit Damage.": {
+	"Reach 100% ☠ Crit Damage.": {
 		time: "0",
 		need: "combat15"
 	},
-	"Reach 150 ☠ Crit Damage.": {
+	"Reach 150% ☠ Crit Damage.": {
 		time: "0",
 		need: "combat15"
 	},
