@@ -1,23 +1,28 @@
 var TABLE = {
 	"Obtain level 20 in the Combat Skill.": {
 		time: "0",
-		need: "combat20"
+		need: "combat20",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many 9000-health Endermen."]
 	},
 	"Obtain level 18 in the Combat Skill.": {
 		time: "0",
-		need: "combat18"
+		need: "combat18",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many 9000-health Endermen."]
 	},
 	"Obtain level 15 in the Combat Skill.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many 9000-health Endermen."]
 	},
 	"Obtain level 10 in the Combat Skill.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Talk to Ike on the Spider's Den to unlock /mobtypesmenu. Kill various mobs, then claim the Combat XP rewards for collecting unique mob types."]
 	},
 	"Obtain level 5 in the Combat Skill.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Talk to Ike on the Spider's Den to unlock /mobtypesmenu. Kill various mobs, then claim the Combat XP rewards for collecting unique mob types."]
 	},
 	"Obtain level 20 in the Farming Skill.": {
 		time: "0",
@@ -166,15 +171,18 @@ var TABLE = {
 	},
 	"Reach 100% ☠ Crit Damage.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Enchant a sword with the Critical 5 enchantment. Then hold it."]
 	},
 	"Reach 150% ☠ Crit Damage.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Enchant a sword with the Critical 5 enchantment, and reforge it to Spicy. Then hold it."]
 	},
-	"Reach 100 ☣ Crit Chance.": {
+	"Reach 100% ☣ Crit Chance.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Hold a sword reforged to Sharp. Then equip a set of Pure Ender Armor while in the End."]
 	},
 	"Reach 30% α Sea Creature Chance.": {
 		time: "1",
@@ -184,7 +192,7 @@ var TABLE = {
 	"Apply the Titanic reforge to an item.": {
 		time: "0",
 		need: "combat15",
-		obtain: ["Reforge pieces of armor at the Blacksmith."]
+		obtain: ["Reforge pieces of armor at the Blacksmith until you get the goal."]
 	},
 	"Apply the Reinforced reforge to an item.": {
 		time: "5",
