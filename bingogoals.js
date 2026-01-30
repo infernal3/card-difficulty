@@ -246,23 +246,28 @@ var TABLE = {
 	},
 	"Kill 2,500 mobs.": {
 		time: "0",
-		need: "combat18"
+		need: "combat18",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Kill 5,000 mobs.": {
 		time: "0",
-		need: "combat20"
+		need: "combat20",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Kill 7,500 mobs.": {
 		time: "0",
-		need: "combat20b"
+		need: "combat20b",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Kill 10,000 mobs.": {
 		time: "0",
-		need: "combat21"
+		need: "combat21",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Kill 15,000 mobs.": {
 		time: "0",
-		need: "combat22"
+		need: "combat22",
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Obtain a Cat Talisman.": {
 		time: "4",
@@ -278,22 +283,26 @@ var TABLE = {
 	},
 	"Store 50,000 Coins in your Bank.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["You can obtain the coins from leveling up your Skills."]
 	},
 	"Store 250,000 Coins in your Bank.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["You can obtain the coins from leveling up your Skills."]
 	},
 	"Store 500,000 Coins in your Bank.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["You can obtain the coins from leveling up your Skills."]
 	},
 	"Store 1,000,000 Coins in your Bank.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["You can obtain the coins from leveling up your Skills."]
 	},
 	"Store 3,500,000 Coins in your Bank.": {
-		time: "",
+		time: "2147483647",
 		need: ""
 	},
 	"Wear 4 pieces of the Angler Armor Set.": {
@@ -310,15 +319,18 @@ var TABLE = {
 	},
 	"Find 10 Relics in the Spider's Den.": {
 		time: "10",
-		need: ""
+		need: "",
+		obtain: ['The locations of Relics can be found on the <a href="https://wiki.hypixel.net/Relics#Locations">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Find 20 Relics in the Spider's Den.": {
 		time: "20",
-		need: ""
+		need: "",
+		obtain: ['The locations of Relics can be found on the <a href="https://wiki.hypixel.net/Relics#Locations">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Find 28 Relics in the Spider's Den.": {
 		time: "30",
-		need: ""
+		need: "",
+		obtain: ['The locations of Relics can be found on the <a href="https://wiki.hypixel.net/Relics#Locations">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Kill 10 Endermen in 8 seconds.": {
 		time: "0",
@@ -334,7 +346,8 @@ var TABLE = {
 	},
 	"Visit 7 different public islands.": {
 		time: "1",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Hub, The Farming Islands, Gold Mine, Deep Caverns, Dwarven Mines, Spider's Den, The End"]
 	},
 	"Complete a timed Target Practice.": {
 		time: "1",
@@ -346,7 +359,8 @@ var TABLE = {
 	},
 	"Obtain a Mediocre Ring of Love.": {
 		time: "5",
-		need: "hotf1"
+		need: "hotf1",
+		obtain: ['A guide for this goal can be found on the <a href="https://wiki.hypixel.net/Quests#Romero_and_Juliette">Hypixel SkyBlock Wiki</a>.']
 	},
 	"Obtain a Campfire Cultist Badge.": {
 		time: "10",
@@ -354,7 +368,8 @@ var TABLE = {
 	},
 	"Summon Arachne.": {
 		time: "5",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Kill Arachne's Keepers to obtain Arachne's Callings. Then place them on the altar in Arachne's Sanctuary."]
 	},
 	"Obtain a Stonk.": {
 		time: "1",
@@ -406,23 +421,28 @@ var TABLE = {
 	},
 	"Obtain an Ultimate Enchanted Book.": {
 		time: "0",
-		need: "cata3"
+		need: "cata3",
+		obtain: ["Complete a Catacombs Floor I run and open a chest that contains an Ultimate Enchanted Book."]
 	},
 	"Obtain a Level VI Enchanted Book.": {
 		time: "0",
-		need: "cata3"
+		need: "cata3",
+		obtain: ["Complete a Catacombs Floor I run and open a chest that contains a Level VI Enchanted Book."]
 	},
 	"Unlock a Wooden Dungeon Chest.": {
 		time: "0",
-		need: "cata3"
+		need: "cata3",
+		obtain: ["Complete a Catacombs Floor I run."]
 	},
 	"Unlock an Emerald Dungeon Chest.": {
 		time: "0",
-		need: "cata3"
+		need: "cata3",
+		obtain: ["Complete a Catacombs Floor I run. You need a minimum of 230 score to get the Emerald Chest."]
 	},
 	"Unlock an Obsidian Dungeon Chest.": {
 		time: "0",
-		need: "cata3"
+		need: "cata3",
+		obtain: ["Complete a Catacombs Floor I run. You need a minimum of 270 score to get the Obsidian Chest."]
 	},
 	"Gain 5 ❁ Strength from a Training Weight.": {
 		time: "0",
