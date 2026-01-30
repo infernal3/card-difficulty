@@ -42,7 +42,12 @@ window.addEventListener("load", () => {
 				}
 				break;
 			case 2:
-				string = `${filteredLore}<br>Time Estimate: ${TableObject.time} min`;
+				string = filteredLore;
+				if (TableObject.time == "Minion") {
+					string += "<br>This goal should be completed using Minions.";
+				} else {
+					string += `<br>Time Estimate: ${TableObject.time} min`
+				}
 				if (TableObject.need) {
 					string += `<br>Requirements: <a href=#${TableObject.need}>${TableObject.need}</a>`;
 				}
