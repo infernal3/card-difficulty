@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 				}
 				break;
 			case 2:
-				string = `${filteredLore}<br>Base Time Estimate: ${TableObject.time} min<br>Requirements (if any): ${TableObject.need}`;
+				string = `${filteredLore}<br>Time Estimate: ${TableObject.time} min<br>Requirements (if any): ${TableObject.need}`;
 				if (TableObject.obtain) {
 					var string1 = "<br><br><div><div>Method(s) for obtaining this goal:</div><ul>";
 					for (const arg of TableObject.obtain) {
