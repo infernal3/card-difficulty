@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
 				if (!CollectionsObject) {
 					string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`
 				} else if (CollectionsObject == "Minion") {
-					string = `${filteredLore}<br>Data found for this collection goal marks it for Minions.`
+					string = `${filteredLore}<br>This goal should be completed using Minions.`
 				} else {
 					var TimeEst = CollectionsObject.formula(goal.requiredAmount);
 					time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
@@ -35,13 +35,19 @@ window.addEventListener("load", () => {
 							lore: CollectionsObject.requirement
 						})
 					}
-					string = `${filteredLore}<br>Calculated Time Estimate: ${TimeEst.toFixed(2)} min<br>Requirements (if any): ${CollectionsObject.requirement}`
+					string = `${filteredLore}<br>Calculated Time Estimate: ${TimeEst.toFixed(2)} min`;
+					if(CollectionsObject.requirement) {
+						string += `<br>Requirements: ${CollectionsObject.requirement}`;
+					}
 				}
 				break;
 			case 2:
-				string = `${filteredLore}<br>Time Estimate: ${TableObject.time} min<br>Requirements (if any): ${TableObject.need}`;
+				string = `${filteredLore}<br>Time Estimate: ${TableObject.time} min`;
+				if (TableObject.need) {
+					string += `<br>Requirements: ${TableObject.need}`;
+				}
 				if (TableObject.obtain) {
-					var string1 = "<br><br><div><div>Method(s) for obtaining this goal:</div><ul>";
+					var string1 = "<br><br><div><div>Guide(s) for obtaining this goal:</div><ul>";
 					for (const arg of TableObject.obtain) {
 						string1 += `<li>${arg}</li>`;
 					}
@@ -52,7 +58,8 @@ window.addEventListener("load", () => {
 				if (!req_pushed.has(TableObject.need)) {
 					req_pushed.add(TableObject.need);
 					array.push({
-						lore: TableObject.need
+						lore: TableObject.need,
+						isRequirement: true
 					})
 				}
 				break;
@@ -61,7 +68,7 @@ window.addEventListener("load", () => {
 				string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
 				break
 			}
-			el("root").innerHTML += '<div class="bingo-goal">' + string + "<br></div><br>";
+			el("root").innerHTML += `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal">` + string + "<br></div><br>";
 			array.shift()
 		} // Post-generation
 		el("C").textContent = (time_total / 60).toFixed(2);
