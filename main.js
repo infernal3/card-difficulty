@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
 			case 2:
 				string = `${filteredLore}<br>Time Estimate: ${TableObject.time} min`;
 				if (TableObject.need) {
-					string += `<br>Requirements: ${TableObject.need}`;
+					string += `<br>Requirements: <a href=#${TableObject.need}>${TableObject.need}</a>`;
 				}
 				if (TableObject.obtain) {
 					var string1 = "<br><br><div><div>Guide(s) for obtaining this goal:</div><ul>";
@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
 				string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
 				break
 			}
-			el("root").innerHTML += `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal">` + string + "<br></div><br>";
+			el("root").innerHTML += (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal">` + string + "<br></div><br>";
 			array.shift()
 		} // Post-generation
 		el("C").textContent = (time_total / 60).toFixed(2);
