@@ -2,17 +2,17 @@ var TABLE = {
 	"Obtain level 20 in the Combat Skill.": {
 		time: "0",
 		need: "combat20",
-		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many 9000-health Endermen."]
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Obtain level 18 in the Combat Skill.": {
 		time: "0",
 		need: "combat18",
-		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many 9000-health Endermen."]
+		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many Endermen."]
 	},
 	"Obtain level 15 in the Combat Skill.": {
 		time: "0",
 		need: "combat15",
-		obtain: ["Use your choice of either a Void Sword or a Dreadlord Sword to kill many 9000-health Endermen."]
+		obtain: ["Use a Void Sword to kill several Endermen."]
 	},
 	"Obtain level 10 in the Combat Skill.": {
 		time: "0",
@@ -26,83 +26,103 @@ var TABLE = {
 	},
 	"Obtain level 20 in the Farming Skill.": {
 		time: "0",
-		need: "garden5"
+		need: "garden5",
+		obtain: ["Unlock Garden and complete the main quest. Then farm a single plot of Wheat to obtain the goal."]
 	},
 	"Obtain level 18 in the Farming Skill.": {
 		time: "0",
-		need: "garden5"
+		need: "garden5",
+		obtain: ["Unlock Garden and complete the main quest. Then farm a single plot of Wheat to obtain the goal."]
 	},
 	"Obtain level 15 in the Farming Skill.": {
 		time: "0",
-		need: "garden1"
+		need: "garden1",
+		obtain: ["Farm wheat in the Hub."]
 	},
 	"Obtain level 10 in the Farming Skill.": {
 		time: "0",
-		need: "garden1"
+		need: "garden1",
+		obtain: ["Farm wheat in the Hub."]
 	},
 	"Obtain level 5 in the Farming Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Farm wheat in the Hub."]
 	},
 	"Obtain level 20 in the Mining Skill.": {
 		time: "0",
-		need: "hotm4"
+		need: "hotm4",
+		obtain: ["Complete commissions in the Dwarven Mines."]
 	},
 	"Obtain level 18 in the Mining Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Complete commissions in the Dwarven Mines."]
 	},
 	"Obtain level 15 in the Mining Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Complete commissions in the Dwarven Mines."]
 	},
 	"Obtain level 10 in the Mining Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Mine sand in the Mushroom Desert."]
 	},
 	"Obtain level 5 in the Mining Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Mine sand in the Mushroom Desert."]
 	},
 	"Obtain level 20 in the Foraging Skill.": {
 		time: "20",
-		need: "hotf1"
+		need: "hotf1",
+		obtain: ["Obtain a Treecapitator. Then break Fig Trees in Galatea to obtain the goal."]
 	},
 	"Obtain level 18 in the Foraging Skill.": {
 		time: "8",
-		need: "hotf1"
+		need: "hotf1",
+		obtain: ["Obtain a Treecapitator. Then break Fig Trees in Galatea to obtain the goal."]
 	},
 	"Obtain level 15 in the Foraging Skill.": {
 		time: "0",
-		need: "hotf1"
+		need: "hotf1",
+		obtain: ["Obtain a Treecapitator. Then break Fig Trees in Galatea to obtain the goal."]
 	},
 	"Obtain level 10 in the Foraging Skill.": {
 		time: "0",
-		need: "hotf1"
+		need: "hotf1",
+		obtain: ["Complete the Park questline, it'll give enough XP to unlock the goal."]
 	},
 	"Obtain level 5 in the Foraging Skill.": {
 		time: "0",
-		need: "hotf1"
+		need: "hotf1",
+		obtain: ["Break Oak logs in the Hub."]
 	},
 	"Obtain level 20 in the Enchanting Skill.": {
 		time: "0",
-		need: "enchanting20"
+		need: "enchanting20",
+		obtain: ["Complete the Experimentation Table 3 times."]
 	},
 	"Obtain level 18 in the Enchanting Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Complete the Experimentation Table 3 times."]
 	},
 	"Obtain level 15 in the Enchanting Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Complete the Experimentation Table."]
 	},
 	"Obtain level 10 in the Enchanting Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Enchant various items until you get the goal."]
 	},
 	"Obtain level 5 in the Enchanting Skill.": {
 		time: "0",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["Enchant various items until you get the goal."]
 	},
 	"Reach 1,250 ❤ Health.": {
 		time: "0",
@@ -132,12 +152,12 @@ var TABLE = {
 	"Reach 200 ❁ Strength.": {
 		time: "0",
 		need: "combat15",
-		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
+		obtain: ["Obtain a full set of Fierce Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 180 ❁ Strength.": {
 		time: "0",
 		need: "combat15",
-		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
+		obtain: ["Obtain a full set of Fierce Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
 	"Reach 160 ❁ Strength.": {
 		time: "0",
@@ -152,17 +172,17 @@ var TABLE = {
 	"Reach 120 ❁ Strength.": {
 		time: "0",
 		need: "combat15",
-		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
+		obtain: ["Obtain a nearly full set of Ender Armor, including at least two pices of equipment. Then hold a Void Sword."]
 	},
 	"Reach 200 ✦ Speed.": {
 		time: "0",
 		need: "",
-		obtain: ["Receive potions from Alixer or a bingo splash.", "Obtain a Rogue Sword and use its ability."]
+		obtain: ["Obtain the Rogue Sword from Jamie and use its ability."]
 	},
 	"Reach 250 ✦ Speed.": {
 		time: "0",
 		need: "",
-		obtain: ["Receive potions from Alixer or a bingo splash.", "Obtain a Rogue Sword and use the ability."]
+		obtain: ["Obtain the Rogue Sword from Jamie and use its ability."]
 	},
 	"Reach 3 ⫽ Ferocity.": {
 		time: "1",
@@ -182,12 +202,12 @@ var TABLE = {
 	"Reach 100% ☣ Crit Chance.": {
 		time: "0",
 		need: "combat15",
-		obtain: ["Hold a sword reforged to Sharp. Then equip a set of Pure Ender Armor while in the End."]
+		obtain: ["Hold a sword reforged to Sharp. Then equip a set of Fierce Ender Armor while in the End."]
 	},
 	"Reach 30% α Sea Creature Chance.": {
 		time: "1",
 		need: "",
-		obtain: ["Equip a set of Angler Armor, including the equipment. Then enchant a fishing rod with Angler 5 and hold it."]
+		obtain: ["Equip a set of Angler Armor. Then enchant a fishing rod with Angler 5 and hold it."]
 	},
 	"Apply the Titanic reforge to an item.": {
 		time: "0",
@@ -355,7 +375,8 @@ var TABLE = {
 	},
 	"Obtain a Grand Experience Bottle.": {
 		time: "0",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Mine End Nodes in the End."]
 	},
 	"Obtain a Mediocre Ring of Love.": {
 		time: "5",
@@ -381,23 +402,28 @@ var TABLE = {
 	},
 	"Reach Level 2 for any Slayer boss.": {
 		time: "2",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Zombie Slayer is recommended for this goal."]
 	},
 	"Reach Level 3 for any Slayer boss.": {
 		time: "5",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Zombie Slayer is recommended for this goal."]
 	},
 	"Reach Level 4 for any Slayer boss.": {
 		time: "8",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Zombie Slayer is recommended for this goal."]
 	},
 	"Reach Level 5 for any Slayer boss.": {
 		time: "30",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Zombie Slayer is recommended for this goal."]
 	},
 	"Kill any tier II Slayer Boss within 80 seconds.": {
 		time: "2",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Zombie Slayer is recommended for this goal."]
 	},
 	"Reach Bestiary Milestone 3.": {
 		time: "0",
@@ -466,23 +492,28 @@ var TABLE = {
 	},
 	"Craft any Pet.": {
 		time: "1",
-		need: ""
+		need: "",
+		obtain: ["The easiest pet to craft is a Silverfish pet, which requires 1 Egg and 64 Cobblestone."]
 	},
 	"Obtain 3 unique Pets.": {
 		time: "1",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Bingo, Bee, Grandma Wolf"]
 	},
 	"Obtain 6 unique Pets.": {
 		time: "2",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Bingo, Bee, Grandma Wolf, Jerry, Silverfish, Horse"]
 	},
 	"Obtain 9 unique Pets.": {
 		time: "10",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Bingo, Bee, Grandma Wolf, Jerry, Silverfish, Horse, Pig, Chicken, Zombie"]
 	},
 	"Obtain 12 unique Pets.": {
 		time: "20",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["Bingo, Bee, Grandma Wolf, Jerry, Silverfish, Horse, Pig, Chicken, Zombie, Owl, Enderman, Rock"]
 	},
 	"Obtain level 4 in the Alchemy Skill.": {
 		time: "2147483647",
@@ -578,15 +609,18 @@ var TABLE = {
 	},
 	"Equip 7 unique Accessories.": {
 		time: "1",
-		need: "hotm3"
+		need: "hotm3",
+		obtain: ["6x talisman purchases from Adventurer + Farming Talisman"]
 	},
 	"Equip 12 unique Accessories.": {
 		time: "4",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["6x talisman purchases from Adventurer, Farming, Archaelogist's Compass, Talis. of Coins, Magnetic, Potion Affinity, Speed"]
 	},
 	"Equip 17 unique Accessories.": {
 		time: "15",
-		need: "combat15"
+		need: "combat15",
+		obtain: ["6x talisman purchases from Adventurer, Farming, Archaelogist's Compass, Talis. of Coins, Magnetic, Potion Affinity, Speed, Yellow Rock of Love, Wolf Paw, Gravity, Campfire Badge, Soul Campfire Badge"]
 	},
 	"Equip 22 unique Accessories.": {
 		time: "30",
@@ -594,23 +628,28 @@ var TABLE = {
 	},
 	"Wear 4 unique Armor Sets.": {
 		time: "1",
-		need: "combat15"
+		need: "combat15",
+		obtain: ['<div>Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 7 unique Armor Sets.": {
 		time: "3",
-		need: "combat15"
+		need: "combat15",
+		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (2): Squire, Celeste<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 12 unique Armor Sets.": {
 		time: "7",
-		need: "combat15"
+		need: "combat15",
+		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (4): Squire, Celeste, Starlight, Mercenary<br>Collections (3): Farm Suit, Leaflet, Cactus<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 15 unique Armor Sets.": {
 		time: "12",
-		need: "combat15"
+		need: "combat15",
+		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (4): Squire, Celeste, Starlight, Mercenary<br>Collections (6): Farm Suit, Leaflet, Cactus, Pumpkin, Mushroom, Prospecting<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 18 unique Armor Sets.": {
 		time: "20",
-		need: "combat15"
+		need: "combat15",
+		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (4): Squire, Celeste, Starlight, Mercenary<br>Collections (7): Farm Suit, Leaflet, Cactus, Pumpkin, Mushroom, Prospecting<br>Other (2): Canopy, Angler (needs equipment), Ender (needs equipment)<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Craft a Cleaver.": {
 		time: "2",
