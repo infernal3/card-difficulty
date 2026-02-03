@@ -1,11 +1,20 @@
 html {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   --text: rgb(0, 0, 0);
-  --inverse: rgb(255, 255, 255);
+  --inverse: rgb(255,255,255);
   --border: rgb(41, 41, 41);
   --default: rgb(238,238,238);
+  --blue: rgb(110,236,210);
   --green: rgb(182,215,168);
   --yellow: rgb(255,229,153);
   --red: rgb(234,153,153);
+}
+
+strong {
+  font-weight: 700;
+  font-style: normal;
 }
 
 div.bingo-goal {
@@ -16,8 +25,8 @@ div.bingo-goal {
   padding: 6px;
   transition:
     background-color 1.5s ease-out,
-    border 0.5s,
-    padding 0.5s;
+    border 0.5s linear,
+    padding 0.5s linear;
   background-color: var(--default);
   color: var(--text);
 }
