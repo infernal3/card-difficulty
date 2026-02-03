@@ -1,5 +1,6 @@
 html {
   --text: rgb(0, 0, 0);
+  --inverse: rgb(255, 255, 255);
   --border: rgb(41, 41, 41);
   --default: rgb(238,238,238);
   --green: rgb(182,215,168);
@@ -12,8 +13,11 @@ div.bingo-goal {
   left: 0;
   position: relative;
   border: 4px outset var(--border);
-  padding: 5px;
-  transition: background-color 1.0s;
+  padding: 6px;
+  transition:
+    background-color 1.5s ease-out,
+    border 0.5s,
+    padding 0.5s;
   background-color: var(--default);
   color: var(--text);
 }
@@ -27,6 +31,7 @@ div.bingo-goal.hard {
   background-color: var(--red);
 }
 div.bingo-goal:hover {
-  background-color: var(--red);
-  border: 9px inset var(--border);
+  background-color: var(--inverse);
+  border: 7px inset var(--border);
+  padding: 3px;
 }
