@@ -629,27 +629,27 @@ var TABLE = {
 	"Wear 4 unique Armor Sets.": {
 		time: "1",
 		need: "combat15",
-		obtain: ['<div>Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br><br>Remember to equip all armor sets in the same lobby.</div>']
+		obtain: ['<div><strong>Armor Sets (4)</strong>: Iron Armor, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail Armor</a>, Gold Armor, Diamond Armor<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 7 unique Armor Sets.": {
 		time: "3",
 		need: "combat15",
-		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (2): Squire, Celeste<br><br>Remember to equip all armor sets in the same lobby.</div>']
+		obtain: ['<div><strong>Vanilla Sets (5)</strong>: Leather Armor, Iron Armor, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail Armor</a>, Gold Armor, Diamond Armor<br><strong>Rosetta Sets (2)</strong>: Squire Armor, Celeste Set<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 12 unique Armor Sets.": {
 		time: "7",
 		need: "combat15",
-		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (4): Squire, Celeste, Starlight, Mercenary<br>Collections (3): Farm Suit, Leaflet, Cactus<br><br>Remember to equip all armor sets in the same lobby.</div>']
+		obtain: ['<div><strong>Vanilla Sets (5)</strong>: Leather Armor, Iron Armor, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail Armor</a>, Gold Armor, Diamond Armor<br><strong>Rosetta Sets (2)</strong>: Squire Armor, Celeste Set<br><strong>Collection Sets (5)</strong>: Farm Suit, Leaflet Armor, Cactus Armor, Mushroom Armor, Prospecting Armor<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 15 unique Armor Sets.": {
 		time: "12",
 		need: "combat15",
-		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (4): Squire, Celeste, Starlight, Mercenary<br>Collections (6): Farm Suit, Leaflet, Cactus, Pumpkin, Mushroom, Prospecting<br><br>Remember to equip all armor sets in the same lobby.</div>']
+		obtain: ['<div><strong>Vanilla Sets (5)</strong>: Leather Armor, Iron Armor, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail Armor</a>, Gold Armor, Diamond Armor<br><strong>Rosetta Sets (3)</strong>: Squire Armor, Celeste Set, Starlight Set<br><strong>Collection Sets (6)</strong>: Farm Suit, Leaflet Armor, Cactus Armor, Pumpkin Armor, Mushroom Armor, Prospecting Armor<br><strong>Other Sets (1)</strong>: Angler Armor+Equipment<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Wear 18 unique Armor Sets.": {
 		time: "20",
 		need: "combat15",
-		obtain: ['<div>Vanilla Sets (5): Leather, Iron, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail</a>, Gold, Diamond<br>Rosetta Sets (4): Squire, Celeste, Starlight, Mercenary<br>Collections (7): Farm Suit, Leaflet, Cactus, Pumpkin, Mushroom, Prospecting<br>Other (2): Canopy, Angler (needs equipment), Ender (needs equipment)<br><br>Remember to equip all armor sets in the same lobby.</div>']
+		obtain: ['<div><strong>Vanilla Sets (5)</strong>: Leather Armor, Iron Armor, <a href="https://wiki.hypixel.net/Iron_Forger#Shop">Chainmail Armor</a>, Gold Armor, Diamond Armor<br><strong>Rosetta Sets (4)</strong>: Squire Armor, Celeste Set, Starlight Set, Mercenary Armor<br><strong>Collection Sets (6)</strong>: Farm Suit, Leaflet Armor, Cactus Armor, Pumpkin Armor, Mushroom Armor, Prospecting Armor<br><strong>Other Sets (3)</strong>: Canopy Armor, Angler Armor+Equipment, Ender Armor+Equipment<br><br>Remember to equip all armor sets in the same lobby.</div>']
 	},
 	"Craft a Cleaver.": {
 		time: "2",
