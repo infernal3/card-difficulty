@@ -1,6 +1,7 @@
 html {
-  --text: #000;
-  --default: #eee;
+  --text: rgb(0, 0, 0);
+  --border: rgb(41, 41, 41);
+  --default: rgb(238,238,238);
   --green: rgb(182,215,168);
   --yellow: rgb(255,229,153);
   --red: rgb(234,153,153);
@@ -10,7 +11,8 @@ div.bingo-goal {
   width: 80%;
   left: 0;
   position: relative;
-  border: 1px solid black;
+  border: 4px outset var(--border);
+  padding: 5px;
   transition: background-color 1.0s;
   background-color: var(--default);
   color: var(--text);
@@ -18,18 +20,13 @@ div.bingo-goal {
 div.bingo-goal.easy {
   background-color: var(--green);
 }
-div.bingo-goal.easy:hover {
-  background-color: var(--green);
-}
 div.bingo-goal.medium {
-  background-color: var(--yellow);
-}
-div.bingo-goal.medium:hover {
   background-color: var(--yellow);
 }
 div.bingo-goal.hard {
   background-color: var(--red);
 }
-div.bingo-goal.hard:hover {
+div.bingo-goal:hover {
   background-color: var(--red);
+  border: 9px inset var(--border);
 }
