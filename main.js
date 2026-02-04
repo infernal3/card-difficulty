@@ -122,7 +122,7 @@ window.addEventListener("load", () => {
 				color = " minion";
 			}
 			if(arg.html1) {
-				el("root").innerHTML += arg.html1 + color + arg.html2;
+				el("root").innerHTML += arg.html1 + (arg.raw.isRequirement ? "" : color) + arg.html2;
 			}
 		}
 		if (!!bingocard.warn_flag) el("A").textContent = `WARNING: Could not find data for ${bingocard.warn_flag} goal${bingocard.warn_flag==1?"":"s"}.`
