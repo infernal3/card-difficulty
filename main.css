@@ -12,6 +12,19 @@ html {
   --red: rgb(234,153,153);
 }
 
+button {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 4px;
+  padding-right: 4px;
+  transition: background-color 0.5s ease-in
+  background-color: var(--default);
+}
+
+button:hover {
+  background-color: var(--inverse);
+}
+
 strong {
   font-weight: 700;
   font-style: normal;
