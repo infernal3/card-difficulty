@@ -1,7 +1,10 @@
 const el = e => document.getElementById(e);
-var req_pushed = new Set;
-var time_total = 0;
-var warn_flag = 0;
+const bingocard = {
+	req_pushed: new Set(),
+	warn_flag: 0,
+	time_total: 0,
+	goals: []
+};
 window.addEventListener("load", () => {
 	el("B").addEventListener("click", async function () {
 		var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
@@ -28,9 +31,9 @@ window.addEventListener("load", () => {
 					string = `${filteredLore}<br>This goal should be completed using Minions.`
 				} else {
 					var TimeEst = CollectionsObject.formula(goal.requiredAmount);
-					time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
-					if (!req_pushed.has(CollectionsObject.requirement)) {
-						req_pushed.add(CollectionsObject.requirement);
+					bingocard.time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
+					if (!bingocard.req_pushed.has(CollectionsObject.requirement)) {
+						bingocard.req_pushed.add(CollectionsObject.requirement);
 						array.push({
 							lore: CollectionsObject.requirement
 						})
@@ -59,9 +62,9 @@ window.addEventListener("load", () => {
 					string += string1 + "</ul></div>";
 				}
 				var TimeEst = parseInt(TableObject.time);
-				time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
-				if (!req_pushed.has(TableObject.need)) {
-					req_pushed.add(TableObject.need);
+				bingocard.time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
+				if (!bingocard.req_pushed.has(TableObject.need)) {
+					bingocard.req_pushed.add(TableObject.need);
 					array.push({
 						lore: TableObject.need,
 						isRequirement: true
@@ -69,15 +72,21 @@ window.addEventListener("load", () => {
 				}
 				break;
 			default:
-				if (filteredLore != "") warn_flag++;
+				if (filteredLore != "") bingocard.warn_flag++;
 				string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
 				break
 			}
-			el("root").innerHTML += (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal">` + string + "<br></div><br>";
-			array.shift()
+			bingocard.goals.push({
+				raw: goal, 
+				html: (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal">` + string + "<br></div><br>"
+			});
+			array.shift();
 		} // Post-generation
-		el("C").textContent = (time_total / 60).toFixed(2);
+		el("C").textContent = (bingocard.time_total / 60).toFixed(2);
 		el("B").style = "display: none;";
-		if (!!warn_flag) el("A").textContent = `WARNING: Could not find data for ${warn_flag} goal${warn_flag==1?"":"s"}.`
+		for(const arg of bingocard.goals) {
+			el("root").innerHTML += arg.html;
+		}
+		if (!!bingocard.warn_flag) el("A").textContent = `WARNING: Could not find data for ${bingocard.warn_flag} goal${bingocard.warn_flag==1?"":"s"}.`
 	})
 });
