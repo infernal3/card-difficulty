@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
 						}
 					}
 					if (v) {
-						console.log("recursiveSolve: adding "+bingocard.goals[v].time);
+						console.log("recursiveSolve: adding "+v.time);
 						return v.time + recursiveSolve(v);
 					}
 				}
