@@ -30,7 +30,7 @@ div.bingo-goal {
   background-color: var(--default);
   color: var(--text);
 }
-div.bingo-goal.easy div.bingo-goal.community {
+div.bingo-goal.easy, div.bingo-goal.community {
   background-color: var(--green);
 }
 div.bingo-goal.medium {
