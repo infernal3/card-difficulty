@@ -115,6 +115,12 @@ window.addEventListener("load", () => {
 			} else if (time > 0) {
 				color = " easy";
 			}
+			if(arg.html2.includes("[COMMUNITY]")) {
+				color = " community";
+			}
+			if(arg.html2.includes("This goal should be completed using Minions.")) {
+				color = " minion";
+			}
 			if(arg.html1) {
 				el("root").innerHTML += arg.html1 + color + arg.html2;
 			}
