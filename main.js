@@ -91,7 +91,7 @@ window.addEventListener("load", () => {
 		el("B").style = "display: none;";
 		for(const arg of bingocard.goals) {
 			var recursiveSolve = function(param) {
-				if(param.object) {
+				if(param.object && !param.raw.isRequirement) {
 					var v = "";
 					for(const arg of bingocard.goals) {
 						if(param.object.need == arg.raw.lore && arg.raw.lore != "combat15" && arg.raw.lore != "hotm3") {
@@ -107,12 +107,12 @@ window.addEventListener("load", () => {
 				return 0;
 			}
 			var time = recursiveSolve(arg), color = "";
-			if(time >= 120) {
-				color = " red";
-			} else if (time >= 30) {
-				color = " yellow";
+			if(time >= 60) {
+				color = " hard";
+			} else if (time >= 10) {
+				color = " medium";
 			} else {
-				color = " green";
+				color = " easy";
 			}
 			el("root").innerHTML += arg.html1 + color + arg.html2;
 		}
