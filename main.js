@@ -78,6 +78,7 @@ window.addEventListener("load", () => {
 				string = `${filteredLore}<br><span style="color: #f00">No data found for this goal.</span>`;
 				break
 			}
+			bingocard.time_total += time_total0;
 			bingocard.goals.push({
 				raw: goal, 
 				html1: (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal`,
@@ -111,7 +112,7 @@ window.addEventListener("load", () => {
 				color = " hard";
 			} else if (time >= 10) {
 				color = " medium";
-			} else {
+			} else if (time > 0) {
 				color = " easy";
 			}
 			el("root").innerHTML += arg.html1 + color + arg.html2;
