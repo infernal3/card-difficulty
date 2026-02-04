@@ -13,6 +13,23 @@ html {
   --red: rgb(234,153,153);
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --text: rgb(255,255,255);
+    --inverse: rgb(0, 0, 0);
+    --border: rgb(181,181,181);
+    --default: rgb(32, 32, 32);
+    --blue: rgb(4, 81, 95);
+    --green: rgb(56, 118, 29);
+    --yellow: rgb(191,144, 0);
+    --red: rgb(153, 0, 0);
+  }
+}
+
+body {
+  background-color: var(--inverse);
+}
+
 h1 {
   font-size: 27px;
 }
