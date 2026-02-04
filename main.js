@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
 			var TableObject = TABLE[filteredLore];
 			var goalType = !!goal.tiers ? 0 : filteredLore.startsWith("Reach ") && filteredLore.endsWith(" Collection.") ? 1 : !TableObject || TableObject.time == "2147483647" ? 3 : 2;
 			var string;
+			var time_total0 = 0;
 			switch (goalType) {
 			case 0:
 				string = `[COMMUNITY] ${filteredLore}`;
@@ -31,12 +32,13 @@ window.addEventListener("load", () => {
 					string = `${filteredLore}<br>This goal should be completed using Minions.`
 				} else {
 					var TimeEst = CollectionsObject.formula(goal.requiredAmount);
-					bingocard.time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
+					time_total0 = isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
 					if (!bingocard.req_pushed.has(CollectionsObject.requirement)) {
 						bingocard.req_pushed.add(CollectionsObject.requirement);
 						array.push({
+							isRequirement: true,
 							lore: CollectionsObject.requirement
-						})
+						});
 					}
 					string = `${filteredLore}<br>Calculated Time Estimate: ${TimeEst.toFixed(2)} min`;
 					if(CollectionsObject.requirement) {
@@ -62,13 +64,13 @@ window.addEventListener("load", () => {
 					string += string1 + "</ul></div>";
 				}
 				var TimeEst = parseInt(TableObject.time);
-				bingocard.time_total += isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
+				time_total0 = isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
 				if (!bingocard.req_pushed.has(TableObject.need)) {
 					bingocard.req_pushed.add(TableObject.need);
 					array.push({
 						lore: TableObject.need,
 						isRequirement: true
-					})
+					});
 				}
 				break;
 			default:
@@ -78,14 +80,41 @@ window.addEventListener("load", () => {
 			}
 			bingocard.goals.push({
 				raw: goal, 
-				html: (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal">` + string + "<br></div><br>"
+				html1: (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal`,
+				html2: `">${string}<br></div><br>`,
+				object: TableObject || {},
+				time: time_total0
 			});
 			array.shift();
 		} // Post-generation
 		el("C").textContent = (bingocard.time_total / 60).toFixed(2);
 		el("B").style = "display: none;";
 		for(const arg of bingocard.goals) {
-			el("root").innerHTML += arg.html;
+			var recursiveSolve = function(param) {
+				if(param.object) {
+					var v = "";
+					for(const arg of bingocard.goals) {
+						if(param.object.need == arg.raw.lore && arg.raw.lore != "combat15" && arg.raw.lore != "hotm3") {
+							v = arg;
+							break;
+						}
+					}
+					if (v) {
+						console.log("recursiveSolve: adding "+bingocard.goals[v].time);
+						return v.time + recursiveSolve(v);
+					}
+				}
+				return 0;
+			}
+			var time = recursiveSolve(arg), color = "";
+			if(time >= 120) {
+				color = " red";
+			} else if (time >= 30) {
+				color = " yellow";
+			} else {
+				color = " green";
+			}
+			el("root").innerHTML += arg.html1 + color + arg.html2;
 		}
 		if (!!bingocard.warn_flag) el("A").textContent = `WARNING: Could not find data for ${bingocard.warn_flag} goal${bingocard.warn_flag==1?"":"s"}.`
 	})
