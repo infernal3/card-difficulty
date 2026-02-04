@@ -5,7 +5,7 @@ html {
   --text: rgb(0, 0, 0);
   --inverse: rgb(255,255,255);
   --border: rgb(41, 41, 41);
-  --default: rgb(238,238,238);
+  --default: rgb(222,222,222);
   --blue: rgb(110,236,210);
   --green: rgb(182,215,168);
   --yellow: rgb(255,229,153);
@@ -30,7 +30,7 @@ div.bingo-goal {
   background-color: var(--default);
   color: var(--text);
 }
-div.bingo-goal.easy {
+div.bingo-goal.easy div.bingo-goal.community {
   background-color: var(--green);
 }
 div.bingo-goal.medium {
@@ -38,6 +38,9 @@ div.bingo-goal.medium {
 }
 div.bingo-goal.hard {
   background-color: var(--red);
+}
+div.bingo-goal.minion {
+  background-color: var(--blue);
 }
 div.bingo-goal:hover {
   background-color: var(--inverse);
