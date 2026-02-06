@@ -81,8 +81,10 @@ window.addEventListener("load", () => {
 			bingocard.time_total += time_total0;
 			bingocard.goals.push({
 				raw: goal, 
-				html1: (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal`,
-				html2: `">${string}<br></div><br>`,
+				tmp: {
+					html1: (goal.isRequirement && !goal.lore) ? "" : `<div ${goal.isRequirement ? `id="${goal.lore}" ` : ""}class="bingo-goal`,
+				    html2: `">${string}<br></div><br>`
+				},
 				object: TableObject || {},
 				time: time_total0
 			});
@@ -115,14 +117,15 @@ window.addEventListener("load", () => {
 			} else if (time > 0) {
 				color = " easy";
 			}
-			if(arg.html2.includes("[COMMUNITY]")) {
+			if(arg.tmp.html2.includes("[COMMUNITY]")) {
 				color = " community";
 			}
-			if(arg.html2.includes("This goal should be completed using Minions.")) {
+			if(arg.tmp.html2.includes("This goal should be completed using Minions.")) {
 				color = " minion";
 			}
-			if(arg.html1) {
-				el("root").innerHTML += arg.html1 + (arg.raw.isRequirement ? "" : color) + arg.html2;
+			if(arg.tmp.html1) {
+				arg.html = arg.tmp.html1 + (arg.raw.isRequirement ? "" : color) + arg.tmp.html2;
+				el("root").innerHTML += arg.html;
 			}
 		}
 		if (!!bingocard.warn_flag) el("A").textContent = `WARNING: Could not find data for ${bingocard.warn_flag} goal${bingocard.warn_flag==1?"":"s"}.`
