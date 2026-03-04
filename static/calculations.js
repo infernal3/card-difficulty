@@ -1,10 +1,10 @@
 // returns crops per minute
-function calculateFarming(ff, mult, efficiency) {
+function calculateFarming(ff=202.5, mult=1, efficiency=0.95) {
     return (1 + (ff * 0.01)) * mult * efficiency * 1200;
 }
 
 // returns mining resources per minute
-function calculateMining(bs, ms, mf, em, pickobulusMult, mult, efficiency) {
+function calculateMining(bs=600, ms=1150, mf=180, em=54, pickobulusMult=30, mult=1, efficiency=0.95) {
     var ticks = Math.round(30 * bs / ms);
     var tickSoftcap = ticks < 4 && ticks > 0 ? 4 : ticks;
     return ((1 + (mf * 0.01)) * mult * efficiency * (1 + (em * 0.01)) * (1200 / tickSoftcap)) + ((1 + (mf * 0.01)) * mult * efficiency * pickobulusMult);
@@ -30,16 +30,18 @@ const Fishing = {
         dumpster_diver: {level: 5, weight: 500},
         trash_gobbler: {level: 5, weight: 750},
         banshee: {level: 10, weight: 300},
-        bayou_sludge: {level: 15, weight: 200}
+        bayou_sludge: {level: 15, weight: 200},
+        alligator: {level: 20, weight: 50}
     }, galatea: {
         bogged: {level: 5, weight: 5000},
         wetwing: {level: 7, weight: 2875},
         tadgang: {level: 5, weight: 1500},
-        ent: {level: 12, weight: 500}
+        ent: {level: 12, weight: 500},
+        the_loch_emperor: {level: 20, weight: 100}
     }
 }
 // returns an object with fishing stats per minute. runs simulation, outputs are random.
-function calculateFishing(scc, fs, fl, region, mult) {
+function calculateFishing(scc=33, fs=69, fl=13, tc=2.5, region="water", mult=1) {
     if(!Fishing) return "An error ocurred. [Fishing] object not present."
     var lureTicks = 56 + 275 - ((fs / 300) * 275); // 300 = FS cap. 275 ticks = Base time to lure fish. 56 ticks = Base time for fish to bite + human reaction time.
     var rolls = 1200 / lureTicks;
@@ -52,17 +54,20 @@ function calculateFishing(scc, fs, fl, region, mult) {
             } 
         }
     }
-    var totalweight = 0;
-    for(const arg of pool) totalweight += arg.weight;
-    if(region.includes("park")) totalweight *= 3;
-    var object = {};
+    var totalweight = 0, object = {};
     for(const arg of pool) {
-        object[arg.name] = (arg.weight / totalweight) * (scc * 0.01) * rolls * mult;
+        totalweight += arg.weight;
+        object[arg.name] = 0;
     }
     if(region.includes("park")) {
         object.squid += (scc * 0.01 * 4 / 9) * rolls * mult;
         object.night_squid = (scc * 0.01 * 2 / 9) * rolls * mult;
+        totalweight *= 3;
     }
-    object.generic_no_sea_creature = (1 - (scc * 0.01)) * rolls * mult;
+    for(const arg of pool) {
+        object[arg.name] += (arg.weight / totalweight) * (scc * 0.01) * rolls * mult;
+    }
+    object.generic_plain_fish = (1 - (scc * 0.01)) * rolls * mult * (1 - (tc * 0.01));
+    object.generic_treasure = (1 - (scc * 0.01)) * rolls * mult * tc * 0.01;
     return object;
 }
