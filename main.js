@@ -7,6 +7,7 @@ const bingocard = {
 };
 window.addEventListener("load", () => {
 	el("B").addEventListener("click", async function () {
+		el("B").disabled = true;
 		var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
 		var object = await stream.json();
 		var array = object.goals;
