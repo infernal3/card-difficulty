@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
 				var CollectionsObject = COLLECTION_GOALS[collection];
 				if (!CollectionsObject) {
 					string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`
-				} else if (CollectionsObject == "Minion") {
+				} else if (CollectionsObject == "Minion" || (typeof(CollectionsObject) === "object" && !!CollectionsObject.minion)) {
 					string = `${filteredLore}<br>This goal should be completed using Minions.`
 				} else {
 					var TimeEst = CollectionsObject.formula(goal.requiredAmount);
