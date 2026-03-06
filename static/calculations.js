@@ -40,7 +40,7 @@ const Fishing = {
         the_loch_emperor: {level: 20, weight: 100}
     }
 }
-// returns an object with fishing stats per minute. runs simulation, outputs are random.
+// returns an object with fishing stats per minute.
 function calculateFishing(scc=33, fs=69, fl=13, tc=2.5, region="water", mult=1) {
     if(!Fishing) return "An error ocurred. [Fishing] object not present."
     var lureTicks = 56 + 275 - ((fs / 300) * 275); // 300 = FS cap. 275 ticks = Base time to lure fish. 56 ticks = Base time for fish to bite + human reaction time.
@@ -70,4 +70,48 @@ function calculateFishing(scc=33, fs=69, fl=13, tc=2.5, region="water", mult=1) 
     object.generic_plain_fish = (1 - (scc * 0.01)) * rolls * mult * (1 - (tc * 0.01));
     object.generic_treasure = (1 - (scc * 0.01)) * rolls * mult * tc * 0.01;
     return object;
+}
+
+function calculateMinion(action_time=26, storage=64, mult=1) {
+    var actions = 3600 / action_time;
+    var rates = actions * mult;
+    return {
+        resource_gain_per_hour: rates,
+        storage_filled_time: storage / rates * 3600,
+    }
+}
+
+function calculateFishingMinion(action_time=75, storage=640, mult=1) {
+    var x = calculateMinion(action_time, storage, mult);
+    var storage_cap=parseInt(storage/64)-6;
+    var used = 0;
+    var storage = [0, 0, 0, 0, 0, 0];
+    var time = 0;
+    while(1 > 0){
+        time += action_time / mult * 128;
+        used++;
+        storage[0] += 32;
+        storage[1] += 16;
+        storage[2] += 5;
+        storage[3] += 4;
+        storage[4] += 4;
+        storage[5] += 4;
+        for(i=0;i<6;i++){
+            if(storage[i] >= 64){
+                storage[i] = 0;
+                used++;
+            }
+        }
+        if(used >= storage_cap) break;
+    }
+    return {
+        cod_per_hour: x.resource_gain_per_hour * 0.5,
+        salmon_per_hour: x.resource_gain_per_hour * 0.25,
+        pufferfish_per_hour: x.resource_gain_per_hour * 0.12,
+        tropical_fish_per_hour: x.resource_gain_per_hour * 0.04,
+        prismarine_shard_per_hour: x.resource_gain_per_hour * 0.03,
+        prismarine_crystal_per_hour: x.resource_gain_per_hour * 0.03,
+        sponge_per_hour: x.resource_gain_per_hour * 0.03,
+        storage_filled_time: time
+    }
 }
