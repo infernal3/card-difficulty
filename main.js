@@ -28,12 +28,14 @@ window.addEventListener("load", () => {
 				var collection = goal.name.substring(0, goal.name.length - 10);
 				var CollectionsObject = COLLECTION_GOALS[collection];
 				if (!CollectionsObject) {
-					string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`
+					string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`;
 				} else if (CollectionsObject == "Minion") {
-					string = `${filteredLore}<br>This goal should be completed using Minions.`
+					string = `${filteredLore}<br>This goal should be completed using Minions.`;
 				} else if (typeof(CollectionsObject) === "object" && !!CollectionsObject.minion) {
-					string = `${filteredLore}<br>This goal should be completed using Minions. Assuming <a href="https://wiki.hypixel.net/Rat">Tasty Cheese</a> is used as fuel:`
-					string += `<br>Each ${CollectionsObject.minion} will produce ${CollectionsObject.per_hour} resource per hour.<br>With a Small Storage, ${CollectionsObject.minion} fills up in ${CollectionsObject.storage/3600} hours.`
+					string = `${filteredLore}<br>This goal should be completed using Minions. Assuming <a href="https://wiki.hypixel.net/Rat">Tasty Cheese</a> is used as fuel:<br><ul>`;
+					string += `<li>Each ${CollectionsObject.minion} will produce <strong>${CollectionsObject.per_hour}</strong> resource per hour.</li>`;
+					string += `<li>With 10x ${CollectionsObject.minion}, they will complete the goal in <strong>${goal.requiredAmount / CollectionsObject.per_hour / 10} hours</strong>.</li>`;
+					string += `<li>With a Small Storage, ${CollectionsObject.minion} fills up in <strong>${CollectionsObject.storage/3600} hours</strong>.</li></ul>`;
 				} else {
 					var TimeEst = CollectionsObject.formula(goal.requiredAmount);
 					time_total0 = isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
