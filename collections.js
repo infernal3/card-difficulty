@@ -47,7 +47,11 @@ const COLLECTION_GOALS = {
     "Tropical Fish": "Minion",
     Pufferfish: "Minion",
     "Prismarine Shard": "Minion",
-    "Prismarine Crystals": "Minion",
+    "Prismarine Crystals": {
+        minion: "Tier I Fishing Minion",
+        per_hour: calculateFishingMinion(75,640,2).prismarine_crystal_per_hour,
+        storage: calculateFishingMinion(75,640,2).storage_filled_time
+    },
     Sponge: "Minion",
     "Clay Ball": "Minion",
     "Lily Pad": null,
