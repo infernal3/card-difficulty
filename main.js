@@ -33,9 +33,12 @@ window.addEventListener("load", () => {
 					string = `${filteredLore}<br>This goal should be completed using Minions.`;
 				} else if (typeof(CollectionsObject) === "object" && !!CollectionsObject.minion) {
 					string = `${filteredLore}<br>This goal should be completed using Minions. Assuming <a href="https://wiki.hypixel.net/Rat">Tasty Cheese</a> is used as fuel:<br><ul>`;
-					string += `<li>Each ${CollectionsObject.minion} will produce <strong>${CollectionsObject.per_hour}</strong> resource per hour.</li>`;
-					string += `<li>With 10x ${CollectionsObject.minion}, they will complete the goal in <strong>${goal.requiredAmount / CollectionsObject.per_hour / 10} hours</strong>.</li>`;
-					string += `<li>With a Small Storage, ${CollectionsObject.minion} fills up in <strong>${CollectionsObject.storage/3600} hours</strong>.</li></ul>`;
+					string += `<li>Each ${CollectionsObject.minion} will produce <strong>${CollectionsObject.per_hour.toFixed(2)}</strong> resource per hour.</li>`;
+					var tempvar38 = (goal.requiredAmount / CollectionsObject.per_hour / 10),tempvar39 = tempvar38 >= 24 ?
+						`${parseInt(tempvar38/24)} days, ${(tempvar38%24).toFixed(2)} hours` :
+						`${tempvar38.toFixed(2)} hours`;
+					string += `<li>With 10x ${CollectionsObject.minion}, they will complete the goal in <strong>${tempvar39}</strong>.</li>`;
+					string += `<li>With a Small Storage, ${CollectionsObject.minion} fills up in <strong>${(CollectionsObject.storage/3600).toFixed(2)} hours</strong>.</li></ul>`;
 				} else {
 					var TimeEst = CollectionsObject.formula(goal.requiredAmount);
 					time_total0 = isNaN(TimeEst) || TimeEst == 2147483647 ? 0 : TimeEst;
