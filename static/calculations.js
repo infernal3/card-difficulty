@@ -67,6 +67,8 @@ function calculateFishing(scc=33, fs=69, fl=13, tc=2.5, region="water", mult=1) 
     for(const arg of pool) {
         object[arg.name] += (arg.weight / totalweight) * (scc * 0.01) * rolls * mult;
     }
+    object.generic_any_sea_creature = scc * 0.01 * rolls * mult;
+    object.generic_any = rolls * mult;
     object.generic_plain_fish = (1 - (scc * 0.01)) * rolls * mult * (1 - (tc * 0.01));
     object.generic_treasure = (1 - (scc * 0.01)) * rolls * mult * tc * 0.01;
     return object;
