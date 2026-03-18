@@ -4,7 +4,7 @@ function calculateFarming(ff=202.5, mult=1, efficiency=1) {
 }
 
 // returns mining resources per minute
-function calculateMining(bs=600, ms=1150, mf=180, em=54, pickobulusMult=30, mult=1, efficiency=1) {
+function calculateMining(bs=600, ms=1150, mf=150, em=48, pickobulusMult=30, mult=1, efficiency=1) {
     var ticks = Math.round(30 * bs / ms);
     var tickSoftcap = ticks < 4 && ticks > 0 ? 4 : ticks;
     return ((1 + (mf * 0.01)) * mult * efficiency * (1 + (em * 0.01)) * (1200 / tickSoftcap)) + ((1 + (mf * 0.01)) * mult * efficiency * pickobulusMult);
