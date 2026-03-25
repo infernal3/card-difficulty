@@ -587,24 +587,24 @@ var TABLE = {
 		time: "2147483647",
 		need: ""
 	},
-	"Equip a COMMON or higher tiered Rock Pet.": {
+	"Equip a Common or higher tiered Rock Pet.": {
 		time: "0",
 		need: "hotm4"
 	},
-	"Equip an UNCOMMON or higher tiered Rock Pet.": {
+	"Equip an Uncommon or higher tiered Rock Pet.": {
 		time: "2147483647",
 		need: ""
 	},
-	"Equip a RARE or higher tiered Rock Pet.": {
+	"Equip a Rare or higher tiered Rock Pet.": {
 		time: "2147483647",
 		need: ""
 	},
-	"Equip a COMMON or higher tiered Dolphin Pet.": {
+	"Equip a Common or higher tiered Dolphin Pet.": {
 		time: "169",
 		need: "",
 		obtain: ["<div>Fish in Spider's Den while its rain is active. When Spider's Den Rain is inactive, fish in Galatea or the Park.<br>The gear recommendations for this goal are:<br>&nbsp;-&nbsp;Fishing Rod with at least Angler V, Lure V, and Piscary V<br>&nbsp;-&nbsp;Angler Armor and Equipment, or better<br>&nbsp;-&nbsp;Minnow Bait (bare minimum). Fish Bait is highly recommended.<br>&nbsp;-&nbsp;Forest Fishing Attribute X (Verdant Shard), if fishing in The Park or Galatea</div>"]
 	},
-	"Equip an UNCOMMON or higher tiered Dolphin Pet.": {
+	"Equip an Uncommon or higher tiered Dolphin Pet.": {
 		time: "170",
 		need: "",
 		obtain: ["<strong>It is highly recommended to use Kat on a Common Dolphin for this goal.</strong><div>Fish in Spider's Den while its rain is active. When Spider's Den Rain is inactive, fish in Galatea or the Park.<br>The gear recommendations for this goal are:<br>&nbsp;-&nbsp;Fishing Rod with at least Angler V, Lure V, and Piscary V<br>&nbsp;-&nbsp;Angler Armor and Equipment, or better<br>&nbsp;-&nbsp;Minnow Bait (bare minimum). Fish Bait is highly recommended.<br>&nbsp;-&nbsp;Forest Fishing Attribute X (Verdant Shard), if fishing in The Park or Galatea</div>"]
