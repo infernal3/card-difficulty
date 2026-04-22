@@ -8,6 +8,7 @@ const bingocard = {
 window.addEventListener("load", () => {
 	el("B").addEventListener("click", async function () {
 		el("B").disabled = true;
+		el("Bm").disabled = true;
 		var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
 		var json_object = await stream.json();
 		//
@@ -103,6 +104,7 @@ window.addEventListener("load", () => {
 			} // Post-generation
 			el("C").textContent = (bingocard.time_total / 60).toFixed(2);
 			el("B").style = "display: none;";
+			el("Bm").style = "display: none;";
 			for(const arg of bingocard.goals) {
 				var recursiveSolve = function(param) {
 					if(param.object) {
