@@ -5,13 +5,7 @@ const bingocard = {
 	time_total: 0,
 	goals: []
 };
-window.addEventListener("load", () => {
-	el("B").addEventListener("click", async function () {
-		el("B").disabled = true;
-		el("Bm").disabled = true;
-		var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
-		var json_object = await stream.json();
-		//
+	//
 		var eventGraph = function(object) {
 			var array = object.goals;
 			el("AA").innerHTML = `Bingo #${object.id} (${object.name})<br>This bingo's modifier is ${object.modifier}.`;
@@ -143,6 +137,14 @@ window.addEventListener("load", () => {
 			}
 			if (!!bingocard.warn_flag) el("A").textContent = `WARNING: Could not find data for ${bingocard.warn_flag} goal${bingocard.warn_flag==1?"":"s"}.`
 		}
+		//
+window.addEventListener("load", () => {
+	el("B").addEventListener("click", async function () {
+		el("B").disabled = true;
+		el("Bm").disabled = true;
+		var stream = await fetch("https://api.hypixel.net/resources/skyblock/bingo");
+		var json_object = await stream.json();
+	
 		eventGraph(json_object);
 	})
 });
