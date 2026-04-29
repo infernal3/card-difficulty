@@ -490,7 +490,7 @@ var TABLE = {
 		time: "0",
 		need: "cata5"
 	},
-	"Craft any Pet.": {
+	"Craft any pet.": {
 		time: "1",
 		need: "",
 		obtain: ["The easiest pet to craft is a Silverfish pet, which requires 1 Egg and 64 Cobblestone."]
@@ -892,5 +892,9 @@ var TABLE = {
     "Wear 4 pieces of Equipment.": {
 		time: "1",
 		need: ""
-	}
+	},
+	"Upgrade a pet with Kat.": {
+		time: "1",
+		need: ""
+	},
 }
