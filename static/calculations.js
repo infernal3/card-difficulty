@@ -14,7 +14,6 @@ const Fishing = {
     water: {
         squid: {level: 1, weight: 1200},
         sea_walker: {level: 1, weight: 800},
-        sea_guardian: {level: 5, weight: 600},
         sea_witch: {level: 7, weight: 700},
         sea_archer: {level: 9, weight: 550},
         rider_of_the_deep: {level: 11, weight: 400},
@@ -22,28 +21,43 @@ const Fishing = {
         sea_leech: {level: 16, weight: 160},
         guardian_defender: {level: 17, weight: 130},
         deep_sea_protector: {level: 18, weight: 88},
-        water_hydra: {level: 19, weight: 18}
+        water_hydra: {level: 19, weight: 18},
     }, hotspot: {
-        frog_man: {level: 5, weight: 1000},
-        snapping_turtle: {level: 10, weight: 250},
+        frog_man: {level: 5, weight: 5000},
+        inkling: {level: 7, weight: 2875},
+        snapping_turtle: {level: 10, weight: 1500},
+        manta_ray: {level: 19, weight: 500},
     }, bayou: {
-        dumpster_diver: {level: 5, weight: 500},
-        trash_gobbler: {level: 5, weight: 750},
-        banshee: {level: 10, weight: 300},
-        bayou_sludge: {level: 15, weight: 200},
-        alligator: {level: 20, weight: 50}
+        trash_gobbler: {level: 5, weight: 5000},
+        dumpster_diver: {level: 5, weight: 2875},
+        banshee: {level: 10, weight: 1500},
+        bayou_sludge: {level: 12, weight: 500},
+        alligator: {level: 20, weight: 100},
+    }, lotus: {
+        atoll_croaker: {level: 10, weight: 5000},
+        lotus_guardian: {level: 10, weight: 2875},
+        gorf: {level: 10, weight: 1500},
+        drowned_captain: {level: 10, weight: 500},
+        puddle_jumper: {level: 10, weight: 100},
+        frog_prince: {level: 10, weight: 25},
     }, galatea: {
         bogged: {level: 5, weight: 5000},
         wetwing: {level: 7, weight: 2875},
         tadgang: {level: 5, weight: 1500},
         ent: {level: 12, weight: 500},
-        the_loch_emperor: {level: 20, weight: 100}
+        the_loch_emperor: {level: 20, weight: 100},
     }
+}
+
+function determineFishingSpeedCap(region) {
+    if(region.includes("bayou")) return 200;
+    if(region.includes("lotus")) return 250;
+    return 300;
 }
 // returns an object with fishing stats per minute.
 function calculateFishing(scc=33, fs=69, fl=13, tc=2.5, region="water", mult=1) {
     if(!Fishing) return "An error ocurred. [Fishing] object not present."
-    var lureTicks = 56 + 275 - ((fs / 300) * 275); // 300 = FS cap. 275 ticks = Base time to lure fish. 56 ticks = Base time for fish to bite + human reaction time.
+    var lureTicks = 56 + 275 - ((fs / determineFishingSpeedCap(region)) * 275); // 300 = base FS cap. 275 ticks = Base time to lure fish. 56 ticks = Base time for fish to bite + human reaction time.
     var rolls = 1200 / lureTicks;
     var pool = [];
     for(const arg in Fishing) {
@@ -61,8 +75,9 @@ function calculateFishing(scc=33, fs=69, fl=13, tc=2.5, region="water", mult=1) 
     }
     if(region.includes("park")) {
         object.squid += (scc * 0.01 * 4 / 9) * rolls * mult;
-        object.night_squid = (scc * 0.01 * 2 / 9) * rolls * mult;
-        totalweight *= 3;
+        // Removed in 0.25 Lotus Atoll
+        // object.night_squid = (scc * 0.01 * 2 / 9) * rolls * mult;
+        totalweight /= (1 - (4 / 9));
     }
     for(const arg of pool) {
         object[arg.name] += (arg.weight / totalweight) * (scc * 0.01) * rolls * mult;
