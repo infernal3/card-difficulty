@@ -130,6 +130,10 @@ const COLLECTION_GOALS = {
         per_hour: calculateMinion(27.5,576,8).resource_gain_per_hour,
         storage: calculateMinion(27.5,576,8).storage_filled_time
     },
-    "Lily Pad": null,
+    "Lily Pad": {
+        minion: "Tier I Lily Pad Minion",
+        per_hour: calculateMinion(37.5,256,2).resource_gain_per_hour,
+        storage: calculateMinion(37.5,256,2).storage_filled_time
+    },
     "Ink Sac": null
 }
