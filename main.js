@@ -26,6 +26,7 @@ var eventGraph = function (object) {
 				var CollectionsObject = COLLECTION_GOALS[collection];
 				if (!CollectionsObject) {
 					string = `${filteredLore}<br><span style="color: #f00">No data found for Collection Goal.</span>`;
+					bingocard.warn_flag++;
 				} else if (CollectionsObject == "Minion") {
 					string = `${filteredLore}<br>This goal should be completed using Minions.`;
 				} else if (typeof (CollectionsObject) === "object" && !!CollectionsObject.minion) {
