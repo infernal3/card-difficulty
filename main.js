@@ -12,9 +12,26 @@ var eventGraph = function (object) {
 	while (array.length > 0) {
 		// Dynamic HTML creation
 		var goal = array[0];
+		if(!goal.lore || typeof(goal.lore) !== "string") {
+			// Malformatted Custom Goal Data
+			bingocard.goals.push({
+				raw: goal,
+				tmp: {
+					html1: (goal.isRequirement && !goal.lore) ? "" : `<div class="bingo-goal`,
+					html2: `"><span style="color: #f00">The data for this goal seems to have been malformatted:</span><br>${JSON.stringify(goal)}<br></div><br>`
+				},
+				object: {},
+				time: 0
+			});
+			array.shift();
+			continue;
+		}
 		var filteredLore = goal.lore.replaceAll(/\xA7./g, "");
 		var TableObject = TABLE[filteredLore];
-		var goalType = !!goal.tiers ? 0 : filteredLore.startsWith("Reach ") && filteredLore.endsWith(" Collection.") ? 1 : !TableObject || TableObject.time == "2147483647" ? 3 : 2;
+		var goalType = !!goal.tiers ? 0 : 
+			           filteredLore.startsWith("Reach ") && filteredLore.endsWith(" Collection.") ? 1 : 
+			           !TableObject || TableObject.time == "2147483647" ? 3 :
+			           2;
 		var string;
 		var time_total0 = 0;
 		switch (goalType) {
