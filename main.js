@@ -20,7 +20,7 @@ var eventGraph = function (object) {
 					html1: (goal.isRequirement && !goal.lore) ? "" : `<div class="bingo-goal`,
 					html2: `"><span style="color: #f00">The data for this goal seems to have been malformatted:</span><br>${JSON.stringify(goal)}<br></div><br>`
 				},
-				object: {},
+				object: null,
 				time: 0
 			});
 			array.shift();
