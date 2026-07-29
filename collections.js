@@ -1,139 +1,139 @@
 const COLLECTION_GOALS = {
-    Wheat: {formula: E => E / 3600, requirement: "garden1"}, 
-    Carrot: {formula: E => E / 13371, requirement: "garden1"}, 
-    Potato: {formula: E => E / 13371, requirement: "garden5"},
-    Pumpkin: {formula: E => E / 3600, requirement: "garden5"},
-    "Melon Slice": {formula: E => E / 17999, requirement: "garden5"},
+    Wheat: { formula: (E) => E / 3600, requirement: "garden1" },
+    Carrot: { formula: (E) => E / 13371, requirement: "garden1" },
+    Potato: { formula: (E) => E / 13371, requirement: "garden5" },
+    Pumpkin: { formula: (E) => E / 3600, requirement: "garden5" },
+    "Melon Slice": { formula: (E) => E / 17999, requirement: "garden5" },
     Mushroom: null,
     Cactus: null,
-    "Sugar Cane": {formula: E => E / 7200, requirement: "garden5"},
+    "Sugar Cane": { formula: (E) => E / 7200, requirement: "garden5" },
     Feather: {
         minion: "Tier V Chicken Minion",
-        per_hour: calculateMinion(22,320,2).resource_gain_per_hour,
-        storage: calculateMinion(22,320,2).storage_filled_time
+        per_hour: calculateMinion(22, 320, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 320, 2).storage_filled_time,
     },
     "Raw Chicken": {
         minion: "Tier V Chicken Minion",
-        per_hour: calculateMinion(22,320,2).resource_gain_per_hour,
-        storage: calculateMinion(22,320,2).storage_filled_time
+        per_hour: calculateMinion(22, 320, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 320, 2).storage_filled_time,
     },
     Leather: {
         minion: "Tier V Cow Minion",
-        per_hour: calculateMinion(22,288,2).resource_gain_per_hour,
-        storage: calculateMinion(22,288,2).storage_filled_time
+        per_hour: calculateMinion(22, 288, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 288, 2).storage_filled_time,
     },
     "Raw Porkchop": {
         minion: "Tier V Pig Minion",
-        per_hour: calculateMinion(22,576,2).resource_gain_per_hour,
-        storage: calculateMinion(22,576,2).storage_filled_time
+        per_hour: calculateMinion(22, 576, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 576, 2).storage_filled_time,
     },
     "Raw Mutton": {
         minion: "Tier V Sheep Minion",
-        per_hour: calculateMinion(22,288,2).resource_gain_per_hour,
-        storage: calculateMinion(22,288,2).storage_filled_time
+        per_hour: calculateMinion(22, 288, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 288, 2).storage_filled_time,
     },
     "Raw Rabbit": {
         minion: "Tier V Rabbit Minion",
-        per_hour: calculateMinion(22,266,2).resource_gain_per_hour,
-        storage: calculateMinion(22,266,2).storage_filled_time
+        per_hour: calculateMinion(22, 266, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 266, 2).storage_filled_time,
     },
-    "Lapis Lazuli": {formula: E => E / 2740.5, requirement: "hotm3"},
-    Cobblestone: {formula: E => E / 4500, requirement: "hotm3"},
-    Coal: {formula: E => E / 1622.5, requirement: "hotm3"},
-    "Iron Ingot": {formula: E => E / 1572.5, requirement: "hotm3"},
-    "Gold Ingot": {formula: E => E / 1622.5, requirement: "hotm3"},
-    Diamond: {formula: E => E / 1547.5, requirement: "hotm3"},
-    Emerald: {formula: E => E / 1560, requirement: "hotm3"},
-    "Redstone Dust": {formula: E => E / 2785.5, requirement: "hotm3"},
+    "Lapis Lazuli": { formula: (E) => E / 2740.5, requirement: "hotm3" },
+    Cobblestone: { formula: (E) => E / 4500, requirement: "hotm3" },
+    Coal: { formula: (E) => E / 1622.5, requirement: "hotm3" },
+    "Iron Ingot": { formula: (E) => E / 1572.5, requirement: "hotm3" },
+    "Gold Ingot": { formula: (E) => E / 1622.5, requirement: "hotm3" },
+    Diamond: { formula: (E) => E / 1547.5, requirement: "hotm3" },
+    Emerald: { formula: (E) => E / 1560, requirement: "hotm3" },
+    "Redstone Dust": { formula: (E) => E / 2785.5, requirement: "hotm3" },
     "Cocoa Beans": null,
-    Obsidian: {formula: E => E / 540, requirement: "combat15"},
-    Gravel: {formula: E => E / 3800, requirement: "combat15"},
-    Sand: {formula: E => E / 4500, requirement: "hotm3"},
-    "End Stone": {formula: E => E / 4050, requirement: "combat15"},
+    Obsidian: { formula: (E) => E / 540, requirement: "combat15" },
+    Gravel: { formula: (E) => E / 3800, requirement: "combat15" },
+    Sand: { formula: (E) => E / 4500, requirement: "hotm3" },
+    "End Stone": { formula: (E) => E / 4050, requirement: "combat15" },
     Mithril: null,
-    "Hard Stone": {formula: E => E / 7000, requirement: "hotm4"},
-    Gemstone: {formula: E => E / 500, requirement: "hotm4"},
+    "Hard Stone": { formula: (E) => E / 7000, requirement: "hotm4" },
+    Gemstone: { formula: (E) => E / 500, requirement: "hotm4" },
     "Rotten Flesh": {
         minion: "Tier V Zombie Minion",
-        per_hour: calculateMinion(22,384,2).resource_gain_per_hour,
-        storage: calculateMinion(22,384,2).storage_filled_time
+        per_hour: calculateMinion(22, 384, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 384, 2).storage_filled_time,
     },
     Bone: {
         minion: "Tier V Skeleton Minion",
-        per_hour: calculateMinion(22,576,2).resource_gain_per_hour,
-        storage: calculateMinion(22,576,2).storage_filled_time
+        per_hour: calculateMinion(22, 576, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 576, 2).storage_filled_time,
     },
     String: {
         minion: "Tier V Spider Minion",
-        per_hour: calculateMinion(22,384,2).resource_gain_per_hour,
-        storage: calculateMinion(22,384,2).storage_filled_time
+        per_hour: calculateMinion(22, 384, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 384, 2).storage_filled_time,
     },
     "Spider Eye": {
         minion: "Tier V Cave Spider Minion",
-        per_hour: calculateMinion(22,384,2).resource_gain_per_hour,
-        storage: calculateMinion(22,384,2).storage_filled_time
+        per_hour: calculateMinion(22, 384, 2).resource_gain_per_hour,
+        storage: calculateMinion(22, 384, 2).storage_filled_time,
     },
     Gunpowder: {
         minion: "Tier V Creeper Minion",
-        per_hour: calculateMinion(23,576,2).resource_gain_per_hour,
-        storage: calculateMinion(23,576,2).storage_filled_time
+        per_hour: calculateMinion(23, 576, 2).resource_gain_per_hour,
+        storage: calculateMinion(23, 576, 2).storage_filled_time,
     },
     "Ender Pearl": null,
     Slimeball: {
         minion: "Tier V Slime Minion",
-        per_hour: calculateMinion(22,576,4).resource_gain_per_hour,
-        storage: calculateMinion(22,576,4).storage_filled_time
+        per_hour: calculateMinion(22, 576, 4).resource_gain_per_hour,
+        storage: calculateMinion(22, 576, 4).storage_filled_time,
     },
-    "Oak Log": {formula: E => E / 1680, requirement: "hotf1"},
-    "Birch Log": {formula: E => E / 2660, requirement: "hotf1"},
-    "Spruce Log": {formula: E => E / 1824, requirement: "hotf1"},
-    "Dark Oak Log": {formula: E => E / 4180, requirement: "hotf1"},
-    "Acacia Log": {formula: E => E / 3610, requirement: "hotf1"},
-    "Jungle Log": {formula: E => E / 4180, requirement: "hotf1"},
+    "Oak Log": { formula: (E) => E / 1680, requirement: "hotf1" },
+    "Birch Log": { formula: (E) => E / 2660, requirement: "hotf1" },
+    "Spruce Log": { formula: (E) => E / 1824, requirement: "hotf1" },
+    "Dark Oak Log": { formula: (E) => E / 4180, requirement: "hotf1" },
+    "Acacia Log": { formula: (E) => E / 3610, requirement: "hotf1" },
+    "Jungle Log": { formula: (E) => E / 4180, requirement: "hotf1" },
     "Raw Cod": {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).raw_cod_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).raw_cod_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     "Raw Salmon": {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).raw_salmon_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).raw_salmon_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     "Tropical Fish": {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).tropical_fish_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).tropical_fish_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     Pufferfish: {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).pufferfish_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).pufferfish_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     "Prismarine Shard": {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).prismarine_shard_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).prismarine_shard_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     "Prismarine Crystals": {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).prismarine_crystal_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).prismarine_crystal_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     Sponge: {
         minion: "Tier I Fishing Minion",
-        per_hour: calculateFishingMinion(75,832,2).sponge_per_hour,
-        storage: calculateFishingMinion(75,832,2).storage_filled_time
+        per_hour: calculateFishingMinion(75, 832, 2).sponge_per_hour,
+        storage: calculateFishingMinion(75, 832, 2).storage_filled_time,
     },
     "Clay Ball": {
         minion: "Tier V Clay Minion",
-        per_hour: calculateMinion(27.5,576,8).resource_gain_per_hour,
-        storage: calculateMinion(27.5,576,8).storage_filled_time
+        per_hour: calculateMinion(27.5, 576, 8).resource_gain_per_hour,
+        storage: calculateMinion(27.5, 576, 8).storage_filled_time,
     },
     "Lily Pad": {
         minion: "Tier I Lily Pad Minion",
-        per_hour: calculateMinion(37.5,256,2).resource_gain_per_hour,
-        storage: calculateMinion(37.5,256,2).storage_filled_time
+        per_hour: calculateMinion(37.5, 256, 2).resource_gain_per_hour,
+        storage: calculateMinion(37.5, 256, 2).storage_filled_time,
     },
-    "Ink Sac": null
-}
+    "Ink Sac": null,
+};

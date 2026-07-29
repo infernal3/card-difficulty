@@ -1,93 +1,96 @@
 html {
-  font-size: 16px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  --text: rgb(0, 0, 0);
-  --inverse: rgb(255,255,255);
-  --border: rgb(41, 41, 41);
-  --default: rgb(222,222,222);
-  --blue: rgb(110,236,210);
-  --green: rgb(182,215,168);
-  --yellow: rgb(255,229,153);
-  --red: rgb(234,153,153);
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    --text: rgb(0, 0, 0);
+    --inverse: rgb(255, 255, 255);
+    --border: rgb(41, 41, 41);
+    --default: rgb(222, 222, 222);
+    --blue: rgb(110, 236, 210);
+    --green: rgb(182, 215, 168);
+    --yellow: rgb(255, 229, 153);
+    --red: rgb(234, 153, 153);
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    --text: rgb(255,255,255);
-    --inverse: rgb(0, 0, 0);
-    --border: rgb(181,181,181);
-    --default: rgb(32, 32, 32);
-    --blue: rgb(4, 81, 95);
-    --green: rgb(56, 118, 29);
-    --yellow: rgb(191,144, 0);
-    --red: rgb(153, 0, 0);
-  }
+    html {
+        --text: rgb(255, 255, 255);
+        --inverse: rgb(0, 0, 0);
+        --border: rgb(181, 181, 181);
+        --default: rgb(32, 32, 32);
+        --blue: rgb(4, 81, 95);
+        --green: rgb(56, 118, 29);
+        --yellow: rgb(191, 144, 0);
+        --red: rgb(153, 0, 0);
+    }
 }
 
 body {
-  background-color: var(--inverse);
+    background-color: var(--inverse);
 }
 
 h1 {
-  font-size: 27px;
+    font-size: 27px;
 }
 
 h2 {
-  font-size: 23px;
+    font-size: 23px;
 }
 
 h3 {
-  font-size: 19px;
+    font-size: 19px;
 }
 
 button {
-  font-size: 16px;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 4px;
-  padding-right: 4px;
-  transition: background-color 0.5s ease-in;
-  background-color: var(--default);
+    font-size: 16px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 4px;
+    padding-right: 4px;
+    transition: background-color 0.5s ease-in;
+    background-color: var(--default);
 }
 
 button:hover {
-  background-color: var(--inverse);
+    background-color: var(--inverse);
 }
 
-strong, h1, h2 {
-  font-weight: 700;
-  font-style: normal;
+strong,
+h1,
+h2 {
+    font-weight: 700;
+    font-style: normal;
 }
 
 div.bingo-goal {
-  width: 80%;
-  left: 0;
-  position: relative;
-  border: 4px outset var(--border);
-  padding: 6px;
-  transition:
-    background-color 1.5s ease-out,
-    border 0.5s linear,
-    padding 0.5s linear;
-  background-color: var(--default);
-  color: var(--text);
+    width: 80%;
+    left: 0;
+    position: relative;
+    border: 4px outset var(--border);
+    padding: 6px;
+    transition:
+        background-color 1.5s ease-out,
+        border 0.5s linear,
+        padding 0.5s linear;
+    background-color: var(--default);
+    color: var(--text);
 }
-div.bingo-goal.easy, div.bingo-goal.community {
-  background-color: var(--green);
+div.bingo-goal.easy,
+div.bingo-goal.community {
+    background-color: var(--green);
 }
 div.bingo-goal.medium {
-  background-color: var(--yellow);
+    background-color: var(--yellow);
 }
 div.bingo-goal.hard {
-  background-color: var(--red);
+    background-color: var(--red);
 }
 div.bingo-goal.minion {
-  background-color: var(--blue);
+    background-color: var(--blue);
 }
 div.bingo-goal:hover {
-  background-color: var(--inverse);
-  border: 7px inset var(--border);
-  padding: 3px;
+    background-color: var(--inverse);
+    border: 7px inset var(--border);
+    padding: 3px;
 }
