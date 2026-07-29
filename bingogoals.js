@@ -149,27 +149,27 @@ var TABLE = {
 		need: "combat15",
 		obtain: ["Obtain a set of Ender Armor and equip it while in the End."]
 	},
-	"Reach 200 ❁ Strength.": {
+	"Reach 200 \ue00d Strength.": {
 		time: "0",
 		need: "combat15",
 		obtain: ["Obtain a full set of Fierce Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
-	"Reach 180 ❁ Strength.": {
+	"Reach 180 \ue00d Strength.": {
 		time: "0",
 		need: "combat15",
 		obtain: ["Obtain a full set of Fierce Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
-	"Reach 160 ❁ Strength.": {
+	"Reach 160 \ue00d Strength.": {
 		time: "0",
 		need: "combat15",
 		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
-	"Reach 140 ❁ Strength.": {
+	"Reach 140 \ue00d Strength.": {
 		time: "0",
 		need: "combat15",
 		obtain: ["Obtain a full set of Ender Armor, including the equipment. Then hold a Void Sword."]
 	},
-	"Reach 120 ❁ Strength.": {
+	"Reach 120 \ue00d Strength.": {
 		time: "0",
 		need: "combat15",
 		obtain: ["Obtain a nearly full set of Ender Armor, including at least two pices of equipment. Then hold a Void Sword."]
@@ -470,7 +470,7 @@ var TABLE = {
 		need: "cata3",
 		obtain: ["Complete a Catacombs Floor I run. You need a minimum of 270 score to get the Obsidian Chest."]
 	},
-	"Gain 5 ❁ Strength from a Training Weight.": {
+	"Gain 5 \ue00d Strength from a Training Weight.": {
 		time: "0",
 		need: "cata3"
 	},
